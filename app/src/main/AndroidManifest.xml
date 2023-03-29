@@ -13,7 +13,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="3634"
+        android:label=""
         android:supportsRtl="true"
         android:theme="@style/Theme.INFS3634"
         tools:targetApi="31">
