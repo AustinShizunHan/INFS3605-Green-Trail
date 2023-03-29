@@ -10,7 +10,7 @@ import android.net.Uri;
 import android.widget.MediaController;
 public class PlantDetailActivity extends AppCompatActivity{
     private WebView webView;
-    private static  final  String IFRAME_EMBED_CODE="<iframe width=\"300\" height=\"300\" src=\"https://www.youtube.com/embed/f5-2oCvxCLc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>";
+    private static  final  String IFRAME_EMBED_CODE="<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/iban71MLIiM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

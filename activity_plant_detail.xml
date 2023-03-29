@@ -115,12 +115,11 @@
             android:layout_marginEnd="76dp" />
 
     </RelativeLayout>
-
     <WebView
+        android:layout_weight="1"
         android:id="@+id/webView"
-        android:layout_width="429dp"
-        android:layout_height="508dp"
-        android:layout_weight="1">
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
     </WebView>
 </LinearLayout>
