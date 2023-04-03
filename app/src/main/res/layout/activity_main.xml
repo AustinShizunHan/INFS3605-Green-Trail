@@ -15,4 +15,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/toTimelinePage_Button"
+        android:layout_width="116dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="172dp"
+        android:text="Go to Timeline Page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

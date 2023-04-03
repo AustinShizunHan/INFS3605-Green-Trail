@@ -1,4 +1,6 @@
 package com.example.infs3634;
 
-public class TimelineActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class TimelineActivity extends AppCompatActivity {
 }
