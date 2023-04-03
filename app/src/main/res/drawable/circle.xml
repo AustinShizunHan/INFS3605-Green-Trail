@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#B8A407"/>
+            <size android:width="120dp" android:height="120dp"/>
+        </shape>
+</item>
+
+    <!--reference https://www.youtube.com/watch?v=XqMctn2BAnE&ab_channel=Rectfy
+    to help create the circle shape-->
+</selector>

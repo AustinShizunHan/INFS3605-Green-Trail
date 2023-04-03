@@ -1,6 +1,9 @@
 package com.example.infs3634;
 
-public class TimelineData {
+import java.util.ArrayList;
+import java.util.List;
+
+public class TimelineModel {
     private String eventDate;
     private String content;
 
@@ -8,7 +11,7 @@ public class TimelineData {
 
 
     // create constructor
-    public TimelineData(String eventDate, content) {
+    public TimelineModel(String eventDate, String content) {
         this.eventDate = eventDate;
         this.content = content;
 
@@ -31,6 +34,8 @@ public class TimelineData {
     public void setContent(String content) {
         this.content = content;
     }
+
+
 }
 
 
