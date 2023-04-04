@@ -1,8 +1,10 @@
-package com.example.infs3634;
+package com.example.infs3605;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.infs3634.R;
 
 public class MainActivity extends AppCompatActivity {
 
