@@ -20,7 +20,7 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.MyView
     @NonNull
     @Override
     public TimelineAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.timeline_row, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.timeline_row_version_two, parent, false);
         return new MyViewHolder(view);
     }
 
