@@ -23,8 +23,9 @@
         android:layout_weight="1"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingBottom="32dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
         android:clickable="true"
         android:background="?android:attr/selectableItemBackground">
 
@@ -41,18 +42,21 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="109dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/cardview_dark_background">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
+
                 <TextView
                     android:id="@+id/content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@drawable/border"
                     android:text="content"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
