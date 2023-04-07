@@ -1,8 +1,8 @@
 package com.example.myapplication;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -13,11 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class ReserveActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private RecyclerViewAdapter adapter;
-    private List<Plant> plants;
+    private ReserveRecyclerViewAdapter adapter;
+    private List<Plant> plants, showPlants;
     private EditText searchBar;
     private Button sortButton;
     private boolean ascendingOrder = true;
@@ -25,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_reserve);
         plants = new ArrayList<>();
+        showPlants = new ArrayList<>();
         plants.add(new Plant("Hill's Fig", R.drawable.abc, "The ultimate lush tree, Hill's Fig can also be grown as a large hedge or pruned for topiary. In low rainfall areas, it has the perfect shape to provide dense shade.", "Hill's Fig is a large, evergreen tree that can grow up to 25 meters tall. It has a broad, spreading canopy and dense foliage that provides shade and shelter for a variety of wildlife. The leaves are glossy and dark green, with a smooth texture and pointed tips. The tree produces small, round fruit that are edible but not usually eaten by humans.\n" +
                 "\n" +
                 " "));
@@ -96,30 +97,31 @@ public class MainActivity extends AppCompatActivity {
         plants.add(new Plant("Port Jackson Fig", R.drawable.y, "Ficus rubiginosa, the rusty fig or Port Jackson fig (damun in the Dharug language), is a species of flowering plant native to eastern Australia in the genus Ficus.", "A spreading, densely-shading tree when mature, F. rubiginosa may reach 30 m (100 ft) or more in height, although it rarely exceeds 10 m (30 ft) in the Sydney region. The trunk is buttressed and can reach 1.5 m (4 ft 11 in) in diameter. The bark is yellow-brown. It can also grow as on other plants as a hemiepiphyte, or 1–5 m (3–16 ft) high lithophyte. \n" +
                 "\n" +
                 "It closely resembles its relative, the Moreton Bay fig (F. macrophylla). Having similar ranges in the wild, they are often confused. The smaller leaves, shorter fruit stalks, and rusty colour of the undersides of the leaves of F. rubiginosa are the easiest distinguishing features. It is also confused with the small-leaved fig (F. obliqua), the syconia of which are smaller, measuring 4–12 mm long and 4–11 mm in diameter, compared with 7–17 mm long and 8–17 mm diameter for F. rubiginosa."));
+
+        getData();
         recyclerView = findViewById(R.id.plants_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new RecyclerViewAdapter(plants, this);
+        adapter = new ReserveRecyclerViewAdapter(showPlants, this);
         recyclerView.setAdapter(adapter);
-
-        searchBar = findViewById(R.id.search_bar);
-        searchBar.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                adapter.getFilter().filter(s);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {}
-        });
-
-
-            }
-
     }
 
+    public void getData(){
+        showPlants.clear();
+        MySqlite mySQLite = new MySqlite(ReserveActivity.this, 1);
+        SQLiteDatabase database = mySQLite.getReadableDatabase();
+        Cursor cursor = database.rawQuery("select * from record", null);
+        System.out.println(cursor.getCount());
+        while (cursor.moveToNext()) {
+            String name = cursor.getString(cursor.getColumnIndex("name"));
+            for (int i = 0; i < plants.size(); i++) {
+                if(plants.get(i).getName().equals(name)){
+                    showPlants.add(plants.get(i));
+                    break;
+                }
+            }
+        }
+    }
+}
 
 
 

@@ -3,27 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/drawable/boston_fern.xml" value="0.1" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/drawable/fiddle_leaf_fig.xml" value="0.1" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/drawable/peace_lily.xml" value="0.1" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/drawable/peace_lily_background.xml" value="0.1" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/drawable/philodendron.xml" value="0.1" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/drawable/pothos.xml" value="0.1" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/drawable/rubber_plant.xml" value="0.1" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/drawable/snake_plant.xml" value="0.1" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/drawable/spider_plant.xml" value="0.1" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/drawable/zz_plant.xml" value="0.1" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/layout/activity_main.xml" value="0.1859375" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/layout/activity_plant_detail.xml" value="0.1859375" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/layout/plant_item.xml" value="0.1859375" />
-        <entry key="..\:/Users/24270/MyApplication7/app/src/main/res/mipmap-anydpi-v26/peace_lily.xml" value="0.1" />
-        <entry key="..\:/sb/infs3605/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/sb/infs3605/app/src/main/res/layout/ack.xml" value="0.25" />
+        <entry key="..\:/sb/infs3605/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/sb/infs3605/app/src/main/res/layout/activity_plant_detail.xml" value="0.2" />
+        <entry key="..\:/sb/infs3605/app/src/main/res/layout/activity_reserve.xml" value="0.14285714285714285" />
+        <entry key="..\:/sb/infs3605/app/src/main/res/layout/layout.xml" value="0.3619791666666667" />
         <entry key="..\:/sb/infs3605/app/src/main/res/layout/plant_item.xml" value="0.25" />
+        <entry key="..\:/sb/infs3605/app/src/main/res/layout/reserve_item.xml" value="0.25" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

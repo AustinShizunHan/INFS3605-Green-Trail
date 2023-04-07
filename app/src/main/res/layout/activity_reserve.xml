@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -55,7 +55,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
@@ -65,21 +65,13 @@
                 android:layout_marginTop="16dp"
                 android:text="Plants"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:layout_marginLeft="16dp" />
+                android:textSize="24sp" />
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
-            <ImageView
-                android:id="@+id/iv_reserve"
-                android:layout_width="78dp"
-                android:layout_height="33dp"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/li"
-                android:tint="@color/white" />
             <ImageView
                 android:id="@+id/plants_right_image"
                 android:layout_width="88dp"
@@ -88,49 +80,19 @@
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/l1"
                 android:layout_marginRight="16dp" />
+
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
     </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/plants_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        tools:context=".PlantDetailActivity">
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-        <TextView
-            android:id="@+id/plant_name_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:text="Test Plant Name"
-            android:padding="16dp"/>
-
-        <TextView
-            android:id="@+id/plant_details_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:text="Test Plant Details"
-            android:layout_below="@id/plant_name_text_view"
-            android:padding="16dp"/>
-
-        <VideoView
-            android:visibility="gone"
-            android:id="@+id/plant_video_view"
-            android:layout_width="270dp"
-            android:layout_height="307dp"
-            android:layout_below="@+id/plant_details_text_view"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="-9dp"
-            android:layout_marginEnd="76dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="76dp" />
-    </RelativeLayout>
-
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"></WebView>
 </LinearLayout>

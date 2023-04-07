@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Plants"
+                android:text="Discover"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:layout_marginLeft="16dp" />
@@ -75,8 +75,8 @@
 
             <ImageView
                 android:id="@+id/iv_reserve"
-                android:layout_width="78dp"
-                android:layout_height="33dp"
+                android:layout_width="75dp"
+                android:layout_height="31dp"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/li"
                 android:tint="@color/white" />
@@ -94,43 +94,33 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="228dp"
         android:background="@android:color/white"
         tools:context=".PlantDetailActivity">
 
-        <TextView
-            android:id="@+id/plant_name_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:text="Test Plant Name"
-            android:padding="16dp"/>
-
-        <TextView
-            android:id="@+id/plant_details_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:text="Test Plant Details"
-            android:layout_below="@id/plant_name_text_view"
-            android:padding="16dp"/>
-
-        <VideoView
-            android:visibility="gone"
-            android:id="@+id/plant_video_view"
-            android:layout_width="270dp"
-            android:layout_height="307dp"
-            android:layout_below="@+id/plant_details_text_view"
+        <ImageView
+            android:id="@+id/left_imag"
+            android:layout_width="187dp"
+            android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="-9dp"
-            android:layout_marginEnd="76dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="76dp" />
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="114dp"
+            android:src="@drawable/unsw" />
+
+
     </RelativeLayout>
 
-    <WebView
-        android:id="@+id/webView"
+    <TextView
+        android:id="@+id/plant_details_text_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"></WebView>
+        android:layout_height="341dp"
+        android:padding="16dp"
+        android:text="TEXT
+About the App
+History of the app
+Facilities available on campus"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
 </LinearLayout>
