@@ -7,22 +7,23 @@
 
     <TextView
         android:id="@+id/context"
-        android:layout_width="325dp"
-        android:layout_height="93dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="56dp"
-        android:text="TextView"
+        android:layout_width="378dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/timeline_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/timelineRecyclerview"
-        android:layout_width="327dp"
-        android:layout_height="413dp"
-        android:layout_marginTop="92dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.38"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="378dp"
+        android:layout_height="517dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/context"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/context"
         app:layout_constraintTop_toBottomOf="@+id/context" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

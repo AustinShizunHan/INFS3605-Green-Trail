@@ -50,19 +50,19 @@ public class TimelineActivity extends AppCompatActivity {
             timelineArrayList.add(new TimelineModel("2021","The Science Sustainability Working Group " +
                     "approves an initial budget to employ students to improve the trail." ));
 
-            timelineArrayList.add(new TimelineModel(" Oct 2021"," The team collaborates" +
+            timelineArrayList.add(new TimelineModel("Oct 2021"," The team collaborates" +
                     " with UNSW Estate Management, UNSW Sustainability, " +
                     "Nura Gili and students and staff in ADA faculties."));
 
-            timelineArrayList.add(new TimelineModel("Nov 2021","A stocktake of the trail " +
-                    "revealed areas for improvement such as updating signage to raising awareness " +
-                    "and need for represention Indigenous voice. through  " ));
+            timelineArrayList.add(new TimelineModel("Nov 2021","Stocktake of the trail " +
+                    "revealed areas for improvement such as updating signage, raising awareness " +
+                    "and increasing representation of Indigenous voice." ));
 
-            timelineArrayList.add(new TimelineModel("Oct 2022","A design competition opens for UNSW students " +
-                    "to submit their logo design. Students are given the opportunity " +
-                    "to increase engagement with UNSW Indigenous plants." ));
+            timelineArrayList.add(new TimelineModel("Oct 2022","A competition opens for UNSW students " +
+                    "to submit their logo design. This enables students to engage with " +
+                    "UNSW Indigenous plants in a creative manner." ));
 
-            timelineArrayList.add(new TimelineModel("March 2023","Students in INFS3605 are" +
+            timelineArrayList.add(new TimelineModel("March 2023","Students in INFS3605 " +
                     "help generate ideas for the Bush Tucker Trail by designing and " +
                     "pitching applications to stakeholders. " ));
             return timelineArrayList;
