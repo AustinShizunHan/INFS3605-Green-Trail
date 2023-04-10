@@ -12,8 +12,13 @@
         android:theme="@style/Theme.INFS3634"
         tools:targetApi="31">
         <activity
-            android:name="QuizStartPage"
+            android:name=".QuizStartPage"
             android:exported="false"/>
+        <activity
+            android:name=".QuizActivity"
+            android:exported="false"/>
+
+
         <activity
             android:name="com.example.infs3605.MainActivity"
             android:exported="true">
