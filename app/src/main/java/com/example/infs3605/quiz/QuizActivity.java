@@ -142,7 +142,7 @@ public class QuizActivity extends AppCompatActivity {
                     rbD.setText(options[flag * 4 + 3]);
                 } else {
                     mark = correct;
-                   // Intent intent = new Intent(getApplicationContext(), FinalResultActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), QuizResults.class);
                     startActivity(intent);
                 }
                 //clear selection

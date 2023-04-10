@@ -5,9 +5,20 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".quiz.QuizStartPage">
+    android:background="@color/white">
 
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ems="10"
+        android:hint="What should we call you?"
+        android:inputType="textPersonName"
+        android:textColor="#df040b"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="388dp" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -23,8 +34,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu">
+        app:layout_constraintStart_toStartOf="parent">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
@@ -34,7 +44,7 @@
         android:layout_height="150dp"
         android:layout_marginTop="77dp"
         android:text="Bush Tucker Quiz"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="46dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
