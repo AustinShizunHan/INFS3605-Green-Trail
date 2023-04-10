@@ -70,3 +70,7 @@
 
     </LinearLayout>
 </LinearLayout>
+
+<!-- references used include: user interface - How to create android timeline view like google location history? - Stack Overflow
+& xml - How to change the border color of CardView by first clicking and again change back to previous color on Second click Android? - Stack Overflow
+this helped to create the timeline line image along with borders around the content respectively -->

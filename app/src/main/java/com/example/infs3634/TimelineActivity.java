@@ -34,7 +34,7 @@ public class TimelineActivity extends AppCompatActivity {
         timelineRecyclerview.setAdapter(TimelineAdapter);
 
 
-        context = findViewById(R.id.context);
+        context = findViewById(R.id.timeline_content);
     }
 
 
@@ -46,7 +46,7 @@ public class TimelineActivity extends AppCompatActivity {
             timelineArrayList.add(new TimelineModel("2000s","UNSW Estate and students " +
                     "were involved in the early creation, mapping and maintenance of the trail." ));
             timelineArrayList.add(new TimelineModel("2007","The Bush Tucker Trail is opened " +
-                    "for the public." ));
+                    "for the public." )); // Reference A
             timelineArrayList.add(new TimelineModel("2021","The Science Sustainability Working Group " +
                     "approves an initial budget to employ students to improve the trail." ));
 
@@ -60,7 +60,7 @@ public class TimelineActivity extends AppCompatActivity {
 
             timelineArrayList.add(new TimelineModel("Oct 2022","A competition opens for UNSW students " +
                     "to submit their logo design. This enables students to engage with " +
-                    "UNSW Indigenous plants in a creative manner." ));
+                    "UNSW Indigenous plants in a creative manner." )); // Reference B
 
             timelineArrayList.add(new TimelineModel("March 2023","Students in INFS3605 " +
                     "help generate ideas for the Bush Tucker Trail by designing and " +
@@ -68,5 +68,13 @@ public class TimelineActivity extends AppCompatActivity {
             return timelineArrayList;
         }
     }
+
+    // References below are used to find data for the timeline,
+// remaining data is sourced from INFS3605 course resources provided by teaching staff
+/*
+Reference A: https://newsroom.unsw.edu.au/news/hit-green-trail
+Reference B: https://www.student.unsw.edu.au/notices/2022/09/logo-design-competition-bush-tucker-trail
+Other references used: Bush food trail summary (Project A), Green Trail Stocktake Report
+ */
 
 

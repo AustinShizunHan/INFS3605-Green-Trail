@@ -12,5 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>  <!--Reference A-->
+        <item name="windowActionBar">false</item>
     </style>
 </resources>
+    <!--Reference A
+        https://stackoverflow.com/questions/32614064/appcompat-does-not-support-the-current-theme-features-nothing-works-->

@@ -3,6 +3,8 @@ package com.example.infs3634;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setTitle("INFS3605");
 
 
-        // Just putting a button here for the time being in order to access the timeline page
+        // SB Comment: Just putting a button here for the time being in order to access the timeline page
         // delete this code once the bottom navigation bar has been created
         Button toVideo_Button = findViewById(R.id.toTimelinePage_Button);
 
