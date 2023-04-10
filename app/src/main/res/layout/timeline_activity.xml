@@ -6,13 +6,61 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/context"
-        android:layout_width="378dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="72dp"
-        android:text="@string/timeline_text"
+        android:id="@+id/header_yellow"
+        android:layout_width="410dp"
+        android:layout_height="53dp"
+        android:background="@color/yellow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_yellow2"
+        android:layout_width="412dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="52dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeline_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="79dp"
+        android:gravity="center"
+        android:text="Timeline"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeline_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="79dp"
+        android:gravity="center"
+        android:text="@string/timeline_text"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,10 +68,9 @@
         android:id="@+id/timelineRecyclerview"
         android:layout_width="378dp"
         android:layout_height="517dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/context"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/context"
-        app:layout_constraintTop_toBottomOf="@+id/context" />
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="157dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
