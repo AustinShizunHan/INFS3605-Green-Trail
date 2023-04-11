@@ -8,6 +8,15 @@
     android:background="@color/white">
 
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
     <EditText
         android:id="@+id/editName"
         android:layout_width="wrap_content"
@@ -17,8 +26,10 @@
         android:hint="What should we call you?"
         android:inputType="textPersonName"
         android:textColor="#df040b"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="388dp" />
+        app:layout_constraintBottom_toTopOf="@+id/quizbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -26,17 +37,6 @@
         android:layout_height="216dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <TextView
         android:id="@+id/textView"
@@ -55,7 +55,7 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/quizbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="548dp"
@@ -73,7 +73,7 @@
         android:layout_marginTop="156dp"
         android:fontFamily="sans-serif-medium"
         android:text="grab your friends and go for a bush tucker adventure!"
-        android:textColor="@color/light_yellow"
+        android:textColor="@color/gold"
 
         android:textSize="16sp"
         android:textStyle="italic"
@@ -81,6 +81,8 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

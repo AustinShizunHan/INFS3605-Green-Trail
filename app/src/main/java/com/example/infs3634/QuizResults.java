@@ -1,4 +1,4 @@
-package com.example.infs3605.quiz;
+package com.example.infs3634;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.infs3605.MainActivity;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.example.infs3634.MainActivity;
+import com.example.infs3634.QuizActivity;
 import com.example.infs3634.R;
 
     //import au.edu.unsw.infs3634.unswlearning.home.HomeDashboardActivity;
