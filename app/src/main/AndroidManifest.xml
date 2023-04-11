@@ -20,7 +20,7 @@
 
 
         <activity
-            android:name="com.example.infs3605.MainActivity"
+            android:name="com.example.infs3634.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
