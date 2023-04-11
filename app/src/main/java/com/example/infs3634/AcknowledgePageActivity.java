@@ -12,7 +12,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class AcknowledgePageActivity extends AppCompatActivity {
-
+//this is ack page
     public static String INTENT_MESSAGE;
     Timer timer;
     @Override
