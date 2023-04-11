@@ -25,7 +25,7 @@ public class QuizStartPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_start);
 
-
+//mmm
     }
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
