@@ -5,14 +5,98 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="303dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="252dp"
-        android:text="Acknowledgement of Country"
-        android:textSize="34sp"
+    <ImageView
+        android:id="@+id/left_image"
+        android:layout_width="587dp"
+        android:layout_height="899dp"
+        android:src="@drawable/hc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <ImageView
+        android:id="@+id/left_ima"
+        android:layout_width="431dp"
+        android:layout_height="527dp"
+        android:src="@drawable/hb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <TextView
+        android:id="@+id/right_text"
+        android:layout_width="360dp"
+        android:layout_height="166dp"
+        android:layout_gravity="center_vertical"
+        android:text="Acknowledgement of Country"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="635dp"
+        tools:layout_editor_absoluteY="122dp" />
+
+    <TextView
+        android:id="@+id/low_text"
+        android:layout_width="282dp"
+        android:layout_height="169dp"
+        android:layout_gravity="center_vertical"
+        android:text="UNSW is on Bidjigal Country and we acknowledge Elders past and present, and the emerging generation, and our Indigenous colleagues with us on campus "
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="662dp"
+        tools:layout_editor_absoluteY="288dp" />
+
+    <ImageView
+        android:id="@+id/left_i"
+        android:layout_width="205dp"
+        android:layout_height="138dp"
+        android:src="@drawable/op"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.937" />
+
+    <TextView
+        android:id="@+id/low_tex"
+        android:layout_width="282dp"
+        android:layout_height="169dp"
+        android:layout_gravity="center_vertical"
+        android:text="Enter"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="776dp"
+        tools:layout_editor_absoluteY="622dp" />
+
+    <ImageView
+        android:id="@+id/left_d"
+        android:layout_width="140dp"
+        android:layout_height="67dp"
+        android:src="@drawable/ij"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/low_t"
+        android:layout_width="174dp"
+        android:layout_height="111dp"
+        android:layout_gravity="center_vertical"
+        android:text="photo credit: David Clode"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="899dp"
+        tools:layout_editor_absoluteY="699dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
