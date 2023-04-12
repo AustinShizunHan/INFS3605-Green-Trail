@@ -56,6 +56,14 @@
             android:name=".PlantDetailActivity"
             android:label="Plant Detail" />
 
+        <activity
+            android:name=".QuizStartPage"
+            android:exported="false"/>
+        <activity
+            android:name=".QuizActivity"
+            android:exported="false"/>
+
+
     </application>
 
 </manifest>

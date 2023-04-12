@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFE600</color>
     <color name="gold">#BBA407</color>
+    <color name="brown">#99582A</color>
+    <color name="light_yellow">#FFE6A7</color>
+    <color name="mid_grey">#656464</color>
 </resources>
