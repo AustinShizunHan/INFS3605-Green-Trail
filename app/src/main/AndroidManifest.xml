@@ -31,22 +31,13 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".AcknowledgePageActivity"
             android:exported="true" />
+
+
         <activity
             android:name=".MapActivity"
             android:exported="true" />
-
-        <activity
-            android:name=".AcknowledgePageActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
 
         <activity
             android:name=".ReserveActivity"
@@ -54,14 +45,29 @@
 
         <activity
             android:name=".PlantDetailActivity"
-            android:label="Plant Detail" />
+            android:exported="true"/>
 
         <activity
-            android:name=".QuizStartPage"
-            android:exported="false"/>
+            android:name=".PlantPageActivity"
+            android:exported="true"/>
+
         <activity
             android:name=".QuizActivity"
             android:exported="false"/>
+
+        <activity
+            android:name=".QuizStartPage"
+            android:exported="true"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
 
     </application>

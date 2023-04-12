@@ -25,7 +25,7 @@ public class PlantPageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.plant_page);
         plants = new ArrayList<>();
         plants.add(new Plant("Hill's Fig", R.drawable.abc, "G5 Blockhouse", "Hill's Fig is a large, evergreen tree that can grow up to 25 meters tall. It has a broad, spreading canopy and dense foliage that provides shade and shelter for a variety of wildlife. The leaves are glossy and dark green, with a smooth texture and pointed tips. The tree produces small, round fruit that are edible but not usually eaten by humans.\n" +
                 "\n" +

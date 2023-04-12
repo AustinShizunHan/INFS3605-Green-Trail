@@ -2,28 +2,78 @@ package com.example.infs3634;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+
 public class MainActivity extends AppCompatActivity {
 
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnLauncher = findViewById(R.id.MapButton);
-        btnLauncher.setOnClickListener(view -> launchMapActivity());
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.quiz);
 
-
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home:
+                        launchHomeActivity();
+                        // handle Home tab selection
+                        return true;
+                    case R.id.location:
+                        launchMapActivity();
+                        // handle Profile tab selection
+                        return true;
+                    case R.id.search:
+                        launchPlantPageActivity();
+                        // handle Home tab selection
+                        return true;
+                    case R.id.quiz:
+                        launchQuizActivity();
+                        // handle Search tab selection
+                        return true;
+                    case R.id.timeline:
+//                        launchTimelineActivity();
+                        // handle Profile tab selection
+                        return true;
+                }
+                return false;
+            }
+        });
     }
 
-    void launchMapActivity(){
+    public void launchHomeActivity() {
+        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchQuizActivity() {
+        Intent intent = new Intent(MainActivity.this, QuizStartPage.class);
+        startActivity(intent);
+    }
+
+    public void launchPlantPageActivity() {
+        Intent intent = new Intent(MainActivity.this, PlantPageActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchMapActivity() {
         Intent intent = new Intent(MainActivity.this, MapActivity.class);
         startActivity(intent);
     }
 
+//    public void launchTimelineActivity() {
+//        Intent intent = new Intent(MainActivity.this, TimelineActivity.class);
+//        startActivity(intent);
+//    }
 
 }
