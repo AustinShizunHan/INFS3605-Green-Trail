@@ -63,13 +63,13 @@
             android:name=".TimelineActivity"
             android:exported="false" />
 
-        <activity
-            android:name=".TimelineModel"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".TimelineModel"-->
+<!--            android:exported="false" />-->
 
-        <activity
-            android:name=".TimelineAdapter"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".TimelineAdapter"-->
+<!--            android:exported="false" />-->
 
         <activity
             android:name=".MainActivity"
