@@ -35,19 +35,19 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.location:
                         launchMapActivity();
-                        // handle Profile tab selection
+                        // handle location tab selection
                         return true;
                     case R.id.search:
                         launchPlantPageActivity();
-                        // handle Home tab selection
+                        // handle search tab selection
                         return true;
                     case R.id.quiz:
                         launchQuizActivity();
-                        // handle Search tab selection
+                        // handle quiz tab selection
                         return true;
                     case R.id.timeline:
                         launchTimelineActivity();
-                        // handle Profile tab selection
+                        // handle timeline tab selection
                         return true;
                 }
                 return false;
@@ -55,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//    public void launchHomeActivity() {
-//        Intent intent = new Intent(MainActivity.this, MainActivity.class);
-//        startActivity(intent);
-//    }
+    public void launchHomeActivity() {
+        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
 
     public void launchQuizActivity() {
         Intent intent = new Intent(MainActivity.this, QuizStartPage.class);

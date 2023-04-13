@@ -47,19 +47,19 @@ public class QuizStartPage extends AppCompatActivity {
                         return true;
                     case R.id.location:
                         launchMapActivity();
-                        // handle Profile tab selection
+                        // handle location tab selection
                         return true;
                     case R.id.search:
                         launchPlantPageActivity();
-                        // handle Profile tab selection
+                        // handle search tab selection
                         return true;
                     case R.id.quiz:
 //                        launchQuizStartPage();
-                        // handle Search tab selection
+                        // handle quiz tab selection
                         return true;
                     case R.id.timeline:
                         launchTimelineActivity();
-//                         handle Profile tab selection
+//                         handle timeline tab selection
                         return true;
                 }
                 return false;
@@ -78,6 +78,10 @@ public class QuizStartPage extends AppCompatActivity {
     }
     public void launchPlantPageActivity() {
         Intent intent = new Intent(QuizStartPage.this, PlantPageActivity.class);
+        startActivity(intent);
+    }
+    public void launchQuizStartPage() {
+        Intent intent = new Intent(QuizStartPage.this, QuizStartPage.class);
         startActivity(intent);
     }
     public void launchTimelineActivity() {

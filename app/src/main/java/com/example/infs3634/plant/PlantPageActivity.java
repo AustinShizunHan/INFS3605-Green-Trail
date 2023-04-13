@@ -51,19 +51,19 @@ public class PlantPageActivity extends AppCompatActivity {
                         return true;
                     case R.id.location:
                         launchMapActivity();
-                        // handle Profile tab selection
+                        // handle location tab selection
                         return true;
                     case R.id.search:
-//                        launchPlantPageActivity();
-                        // handle Home tab selection
+                        //launchPlantPageActivity();
+                        // handle search tab selection
                         return true;
                     case R.id.quiz:
                         launchQuizActivity();
-                        // handle Search tab selection
+                        // handle quiz tab selection
                         return true;
                     case R.id.timeline:
                         launchTimelineActivity();
-                        // handle Profile tab selection
+                        // handle timeline tab selection
                         return true;
                 }
                 return false;
@@ -169,10 +169,10 @@ public class PlantPageActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
-//        public void launchPlantPageActivity() {
-//            Intent intent = new Intent(PlantPageActivity.this, PlantPageActivity.class);
-//            startActivity(intent);
-//        }
+        public void launchPlantPageActivity() {
+            Intent intent = new Intent(PlantPageActivity.this, PlantPageActivity.class);
+            startActivity(intent);
+        }
 
         public void launchMapActivity() {
             Intent intent = new Intent(PlantPageActivity.this, MapActivity.class);

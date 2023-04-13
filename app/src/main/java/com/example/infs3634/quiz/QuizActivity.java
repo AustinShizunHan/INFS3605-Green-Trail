@@ -55,7 +55,7 @@ public class QuizActivity extends AppCompatActivity {
     public static int mark = 0, correct = 0, wrong = 0;
 
     @Override
-    //start of the dog quiz activty
+    //start of the plant quiz activty
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_activity);
