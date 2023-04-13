@@ -64,8 +64,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/timelineRecyclerview"
-        android:layout_width="385dp"
-        android:layout_height="455dp"
+        android:layout_width="389dp"
+        android:layout_height="428dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -73,6 +73,14 @@
         app:layout_constraintTop_toBottomOf="@+id/timeline_content">
 
     </androidx.recyclerview.widget.RecyclerView>
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

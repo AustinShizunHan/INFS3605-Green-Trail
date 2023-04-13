@@ -111,7 +111,7 @@ android:background="#D9D9D9">
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="9dp"
             android:layout_marginBottom="-45dp"
             android:text=" Built on top of an ancient landscape
 The UNSW Kensington Campus is a veneer built on top of an ancient landscape of high sand dunes and swampy swales. They are tens of thousands of years old and many metres deep.

@@ -33,7 +33,7 @@
         android:layout_height="166dp"
         android:layout_gravity="center_vertical"
         android:text="Acknowledgement of Country"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="30sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="635dp"
