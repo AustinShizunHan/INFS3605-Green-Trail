@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.EditText;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,17 +20,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlantPageActivity extends AppCompatActivity {
-
+    private static final int REQUEST_CODE_QR_SCAN = 101;
     private RecyclerView recyclerView;
     private RecyclerViewAdapter adapter;
     private List<Plant> plants;
     private EditText searchBar;
-    private Button sortButton;
+    private ImageButton sortButton;
     private boolean ascendingOrder = true;
+    private ImageButton imageButton;
     BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.plant_page);
 
@@ -62,6 +66,16 @@ public class PlantPageActivity extends AppCompatActivity {
                         return true;
                 }
                 return false;
+            }
+        });
+        ImageButton imagebutton = findViewById(R.id.imageButton);
+        imagebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to launch the QRScanActivity
+                Intent intent = new Intent(PlantPageActivity.this, QRScanActivity.class);
+                // Start the QRScanActivity
+                startActivity(intent);
             }
         });
         plants = new ArrayList<>();
@@ -181,4 +195,11 @@ public class PlantPageActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
-}
+
+        }
+
+
+
+
+
+
