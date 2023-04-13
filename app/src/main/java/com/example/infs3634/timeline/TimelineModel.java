@@ -1,4 +1,4 @@
-package com.example.infs3634;
+package com.example.infs3634.timeline;
 
 import java.util.ArrayList;
 import java.util.List;

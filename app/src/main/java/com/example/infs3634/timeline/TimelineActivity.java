@@ -1,4 +1,4 @@
-package com.example.infs3634;
+package com.example.infs3634.timeline;
 
 import android.os.Bundle;
 import android.widget.TextView;
@@ -7,12 +7,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.infs3634.R;
+
 import java.util.ArrayList;
 
 public class TimelineActivity extends AppCompatActivity {
-    TimelineModel TimelineModel;
+    com.example.infs3634.timeline.TimelineModel TimelineModel;
     ArrayList<TimelineModel> timelineArrayList;
-    TimelineAdapter TimelineAdapter;
+    com.example.infs3634.timeline.TimelineAdapter TimelineAdapter;
     RecyclerView timelineRecyclerview;
     TextView context;
 

@@ -1,4 +1,4 @@
-package com.example.infs3634;
+package com.example.infs3634.plant;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.infs3634.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

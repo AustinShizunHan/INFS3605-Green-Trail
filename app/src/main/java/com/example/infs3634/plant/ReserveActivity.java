@@ -1,4 +1,4 @@
-package com.example.infs3634;
+package com.example.infs3634.plant;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,6 +9,8 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.infs3634.R;
 
 import java.util.ArrayList;
 import java.util.List;

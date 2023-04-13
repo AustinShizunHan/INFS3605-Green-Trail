@@ -6,6 +6,10 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.infs3634.location.MapActivity;
+import com.example.infs3634.plant.PlantPageActivity;
+import com.example.infs3634.quiz.QuizStartPage;
+import com.example.infs3634.timeline.TimelineActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 

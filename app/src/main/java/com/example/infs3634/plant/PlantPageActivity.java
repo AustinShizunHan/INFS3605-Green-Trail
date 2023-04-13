@@ -1,4 +1,4 @@
-package com.example.infs3634;
+package com.example.infs3634.plant;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.infs3634.MainActivity;
+import com.example.infs3634.location.MapActivity;
+import com.example.infs3634.R;
+import com.example.infs3634.timeline.TimelineActivity;
+import com.example.infs3634.quiz.QuizStartPage;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 

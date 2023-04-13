@@ -87,7 +87,7 @@ android:background="#D9D9D9">
         android:layout_width="match_parent"
         android:layout_height="484dp"
         android:background="@android:color/white"
-        tools:context=".PlantDetailActivity">
+        tools:context=".plant.PlantDetailActivity">
 
         <ImageView
             android:id="@+id/left_imag"

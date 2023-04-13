@@ -1,4 +1,4 @@
-package com.example.infs3634;
+package com.example.infs3634.quiz;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.infs3634.MainActivity;
+import com.example.infs3634.R;
+import com.example.infs3634.quiz.QuizActivity;
 
 //import au.edu.unsw.infs3634.unswlearning.home.HomeDashboardActivity;
 
