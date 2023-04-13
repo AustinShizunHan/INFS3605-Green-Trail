@@ -19,14 +19,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.quiz);
+        bottomNavigationView.setSelectedItemId(R.id.home);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home:
-                        launchHomeActivity();
+//                        launchHomeActivity();
                         // handle Home tab selection
                         return true;
                     case R.id.location:
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                         // handle Search tab selection
                         return true;
                     case R.id.timeline:
-//                        launchTimelineActivity();
+                        launchTimelineActivity();
                         // handle Profile tab selection
                         return true;
                 }
@@ -51,10 +51,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void launchHomeActivity() {
-        Intent intent = new Intent(MainActivity.this, MainActivity.class);
-        startActivity(intent);
-    }
+//    public void launchHomeActivity() {
+//        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+//        startActivity(intent);
+//    }
 
     public void launchQuizActivity() {
         Intent intent = new Intent(MainActivity.this, QuizStartPage.class);
@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-//    public void launchTimelineActivity() {
-//        Intent intent = new Intent(MainActivity.this, TimelineActivity.class);
-//        startActivity(intent);
-//    }
+    public void launchTimelineActivity() {
+        Intent intent = new Intent(MainActivity.this, TimelineActivity.class);
+        startActivity(intent);
+    }
 
 }
