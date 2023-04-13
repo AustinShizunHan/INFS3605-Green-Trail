@@ -25,23 +25,14 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <TextView
-            android:id="@+id/right_text"
+        <ImageView
+            android:id="@+id/right_image"
             android:layout_width="136dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="16dp"
-            android:text="Bush Tucker Trail"
-            android:textColor="#000000"
-            android:textSize="18sp" />
-
-        <ImageView
-            android:id="@+id/right_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/lea" />
+            android:layout_marginRight="16dp"
+            android:src="@drawable/bush" />
     </LinearLayout>
 
     <LinearLayout
@@ -104,7 +95,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/plants_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="456dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 </LinearLayout>

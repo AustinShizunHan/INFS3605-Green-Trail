@@ -26,25 +26,15 @@ android:background="#D9D9D9">
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <TextView
-        android:id="@+id/right_text"
+
+    <ImageView
+        android:id="@+id/right_image"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="16dp"
-        android:text="Bush Tucker Trail"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:layout_marginRight="16dp" />
-
-    <ImageView
-        android:id="@+id/right_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/lea"
-        android:layout_marginRight="16dp" />
+        android:layout_marginRight="16dp"
+        android:src="@drawable/bush" />
 </LinearLayout>
 
 <LinearLayout
@@ -92,25 +82,43 @@ android:background="#D9D9D9">
     </LinearLayout>
 </LinearLayout>
 
-<RelativeLayout
-    android:id="@+id/relativeLayout"
-    android:layout_width="match_parent"
-    android:layout_height="228dp"
-    android:background="@android:color/white"
-    tools:context=".PlantDetailActivity">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="522dp"
+        android:background="@android:color/white"
+        tools:context=".PlantDetailActivity">
 
-    <ImageView
-        android:id="@+id/left_imag"
-        android:layout_width="187dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
-        android:layout_gravity="center_vertical"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="114dp"
-        android:src="@drawable/unsw" />
+        <ImageView
+            android:id="@+id/left_imag"
+            android:layout_width="382dp"
+            android:layout_height="317dp"
 
-</RelativeLayout>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="19dp"
+            android:src="@drawable/home" />
+
+        <TextView
+            android:layout_width="390dp"
+            android:layout_height="265dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="-45dp"
+            android:text=" Built on top of an ancient landscape
+The UNSW Kensington Campus is a veneer built on top of an ancient landscape of high sand dunes and swampy swales. They are tens of thousands of years old and many metres deep.
+"
+            android:textColor="#070707"
+            android:textSize="24sp" />
+    </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
