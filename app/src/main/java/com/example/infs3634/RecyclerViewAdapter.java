@@ -62,7 +62,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 } else {
                     List<Plant> filteredList = new ArrayList<>();
                     for (Plant plant : plants) {
-                        if (plant.getName().toLowerCase().contains(query) || plant.getDescription().toLowerCase().contains(query)) {
+                        if (plant.getName().toLowerCase().contains(query) || plant.getDetails().toLowerCase().contains(query)) {
                             filteredList.add(plant);
                         }
                     }

@@ -54,27 +54,23 @@ public class QuizStartPage extends AppCompatActivity {
         });
 
     }
-
-    public void launchQuizActivity() {
-        Intent intent = new Intent(QuizStartPage.this, QuizActivity.class);
-//        intent.putExtra(QuizResults.INTENT_MESSAGE, msg);
-        startActivity(intent);
-        System.out.println("quiz button working");
-    }
-
     public void launchHomeActivity() {
         Intent intent = new Intent(QuizStartPage.this, MainActivity.class);
-//        intent.putExtra(MainActivity.INTENT_MESSAGE, msg);
         startActivity(intent);
-        System.out.println("home button working");
+    }
+
+    public void launchPlantPageActivity() {
+        Intent intent = new Intent(QuizStartPage.this, PlantPageActivity.class);
+        startActivity(intent);
     }
 
     public void launchMapActivity() {
         Intent intent = new Intent(QuizStartPage.this, MapActivity.class);
-//        intent.putExtra(QuizResults.INTENT_MESSAGE, msg);
         startActivity(intent);
-        System.out.println("map button working");
     }
 
-
+    public void launchQuizActivity() {
+        Intent intent = new Intent(QuizStartPage.this, QuizActivity.class);
+        startActivity(intent);
+    }
 }
