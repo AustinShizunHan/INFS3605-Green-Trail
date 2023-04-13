@@ -95,7 +95,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/plants_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="456dp"
+        android:layout_height="421dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
