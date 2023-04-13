@@ -64,7 +64,7 @@ public class ReserveRecyclerViewAdapter extends RecyclerView.Adapter<ReserveRecy
                 } else {
                     List<Plant> filteredList = new ArrayList<>();
                     for (Plant plant : plants) {
-                        if (plant.getName().toLowerCase().contains(query) || plant.getDescription().toLowerCase().contains(query)) {
+                        if (plant.getName().toLowerCase().contains(query) || plant.getDetails().toLowerCase().contains(query)) {
                             filteredList.add(plant);
                         }
                     }
@@ -82,6 +82,8 @@ public class ReserveRecyclerViewAdapter extends RecyclerView.Adapter<ReserveRecy
             }
         };
     }
+
+
 
     public void sortByName(boolean ascending) {
         if (ascending) {
@@ -135,7 +137,7 @@ public class ReserveRecyclerViewAdapter extends RecyclerView.Adapter<ReserveRecy
             Plant plant = filteredPlants.get(position);
             Intent intent = new Intent(context, PlantDetailActivity.class);
             intent.putExtra("name", plant.getName());
-            intent.putExtra("description", plant.getDescription());
+            intent.putExtra("details", plant.getDetails());
             context.startActivity(intent);
         }
     }

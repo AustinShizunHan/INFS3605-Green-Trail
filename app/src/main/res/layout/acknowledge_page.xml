@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ImageView
         android:id="@+id/left_image"
         android:layout_width="587dp"
@@ -14,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.166" />
 
     <ImageView
         android:id="@+id/left_ima"
@@ -25,31 +26,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.308" />
 
     <TextView
-        android:id="@+id/right_text"
-        android:layout_width="360dp"
-        android:layout_height="166dp"
-        android:layout_gravity="center_vertical"
+
+        android:layout_width="396dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
         android:text="Acknowledgement of Country"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="635dp"
-        tools:layout_editor_absoluteY="122dp" />
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:typeface="monospace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/left_ima" />
 
     <TextView
-        android:id="@+id/low_text"
-        android:layout_width="282dp"
-        android:layout_height="169dp"
-        android:layout_gravity="center_vertical"
+        android:layout_width="355dp"
+        android:layout_height="362dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="164dp"
+        android:gravity="center"
         android:text="UNSW is on Bidjigal Country and we acknowledge Elders past and present, and the emerging generation, and our Indigenous colleagues with us on campus "
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="662dp"
-        tools:layout_editor_absoluteY="288dp" />
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:typeface="sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/left_ima" />
 
     <ImageView
         android:id="@+id/left_i"
@@ -62,41 +66,41 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.937" />
 
+
     <TextView
-        android:id="@+id/low_tex"
-        android:layout_width="282dp"
-        android:layout_height="169dp"
-        android:layout_gravity="center_vertical"
-        android:text="Enter"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="776dp"
-        tools:layout_editor_absoluteY="622dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="512dp"
+        android:text="Enter "
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/left_ima" />
 
     <ImageView
         android:id="@+id/left_d"
-        android:layout_width="140dp"
-        android:layout_height="67dp"
+        android:layout_width="199dp"
+        android:layout_height="74dp"
         android:src="@drawable/ij"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintHorizontal_bias="0.825"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/low_t"
-        android:layout_width="174dp"
-        android:layout_height="111dp"
-        android:layout_gravity="center_vertical"
-        android:text="photo credit: David Clode"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="899dp"
-        tools:layout_editor_absoluteY="699dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="600dp"
+        android:text="photo credit: David Clode "
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/left_ima" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

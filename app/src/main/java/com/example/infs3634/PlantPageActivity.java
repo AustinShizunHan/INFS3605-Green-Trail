@@ -65,30 +65,32 @@ public class PlantPageActivity extends AppCompatActivity {
             }
         });
         plants = new ArrayList<>();
-        plants.add(new Plant("Hill's Fig", R.drawable.abc, "G5 Blockhouse", "Hill's Fig is a large, evergreen tree that can grow up to 25 meters tall. It has a broad, spreading canopy and dense foliage that provides shade and shelter for a variety of wildlife. The leaves are glossy and dark green, with a smooth texture and pointed tips. The tree produces small, round fruit that are edible but not usually eaten by humans.\n" +
+        plants.add(new Plant("Hill's Fig", R.drawable.abc, "G5 Blockhouse ", " Hill's Fig is a large, evergreen tree that can grow up to 25 meters tall. It has a broad, spreading canopy and dense foliage that provides shade and shelter for a variety of wildlife. The leaves are glossy and dark green, with a smooth texture and pointed tips. The tree produces small, round fruit that are edible but not usually eaten by humans.\n" +
                 "\n" +
-                " "));
+                "(location: G5 Blockhouse) "));
         plants.add(new Plant("Gymea Lilly", R.drawable.b, "Roundhouse", "The Gymea Lily can grow up to 4 meters tall and produces a tall, spear-like inflorescence that can reach up to 6 meters in height. The inflorescence is covered in hundreds of bright red flowers that attract birds and other wildlife. The leaves are strap-like and can grow up to 2 meters long, forming a large rosette at the base of the plant.\n" +
                 "\n" +
-                " "));
+                " (location: Roundhouse)"));
         plants.add(new Plant("Broad-leaved Paperbark", R.drawable.c, "SquareHouse", "The Broad-leaved Paperbark can grow up to 20 meters tall and has a distinctive, papery bark that peels away in strips. The leaves are long and narrow, with five distinct veins running parallel to the midrib. The tree produces clusters of small, white flowers that are highly attractive to bees and other pollinators.\n" +
                 "\n" +
-                " "));
+                "(location: SquareHouse) "));
         plants.add(new Plant("Crimson Bottlerush", R.drawable.d, "Pool Lawn", "The Crimson Bottlebrush can grow up to 5 meters tall and has striking, cylindrical flower spikes that are bright red in color. The leaves are narrow and lance-shaped, with a lemon-like fragrance when crushed. The tree produces small, woody fruits that contain numerous small seeds.\n" +
                 "\n" +
-                " "));
-        plants.add(new Plant("Heath Banksia", R.drawable.e, "Pool Lawn", "Banksia ericifolia grows as a large shrub up to 6 metres (20 feet) in height, though often smaller, around 1–2 metres (3.5–6.5 ft), in exposed places such as coastal or mountain heathlands. The grey-coloured bark is smooth and fairly thin with lenticels; however it can thicken significantly with age. "));
-        plants.add(new Plant("Mountain Cedar Wattle", R.drawable.wz, "International House ", "The tree can grow to a height of around 20 m (66 ft) when mature, with exceptional specimens reaching over 30 m (98 ft). It has deeply fissured bark with a dark brown to black colour at the base of the tree with terete branchlets that are hairy when young. The dark green evergreen leaves typically have a length of 2.5 to 9 cm (0.98 to 3.54 in) with one prominent gland about halfway along. "));
+                "(location: Pool Lawn) "));
+        plants.add(new Plant("Heath Banksia", R.drawable.e, "Pool Lawn", "Banksia ericifolia grows as a large shrub up to 6 metres (20 feet) in height, though often smaller, around 1–2 metres (3.5–6.5 ft), in exposed places such as coastal or mountain heathlands. The grey-coloured bark is smooth and fairly thin with lenticels; however it can thicken significantly with age.\n" +  "\n" +
+                "(location: Pool Lawn) "));
+        plants.add(new Plant("Mountain Cedar Wattle", R.drawable.wz, "International House ", "The tree can grow to a height of around 20 m (66 ft) when mature, with exceptional specimens reaching over 30 m (98 ft). It has deeply fissured bark with a dark brown to black colour at the base of the tree with terete branchlets that are hairy when young. The dark green evergreen leaves typically have a length of 2.5 to 9 cm (0.98 to 3.54 in) with one prominent gland about halfway along. \n" +  "\n" +
+                "(location: International House) "));
         plants.add(new Plant("Native Mint", R.drawable.g, " International House", "The Native Mint can grow up to 1 meter tall and has oval-shaped leaves with a strong minty fragrance. The flowers are small and white or purple in color, and are arranged in clusters at the end of the stems. The plant produces small, round seeds that are dispersed by wind or water.\n" +
                 "\n" +
-                "The Native Mint is an important plant in many ecosystems, providing food and habitat for a variety of wildlife.  "));
+                "(location: International House) "));
         plants.add(new Plant("Tuckeroo", R.drawable.h, "Myers Studio", "Growing up to 10 metres (33 ft) with a stem diameter of 50 centimetres (20 in). The bark is smooth grey or brown with raised horizontal lines. The bases of the trees are usually flanged.\n" +
                 "\n" +
                 "Leaves are pinnate and alternate with six to ten leaflets. These are not toothed, and are egg-shaped to elliptic-oblong, and 7 to 10 centimetres (2.8 to 3.9 in) long. The tips are often notched or blunt.  \n" +
                 "\n" +
                 "\n" +
                 "\n" +
-                ""));
+                "(location: Myers Studio)"));
         plants.add(new Plant("Prickly Leaved Tea Tree", R.drawable.i, "Central Lecture Theater Block", "Leptospermum continentale is a slender, straggling shrub that typically grows to a height of 1–2 m (3 ft 3 in – 6 ft 7 in) or more. It has smooth bark that is shed in stringy strips. The leaves are narrow egg-shaped, 5–13 mm (0.20–0.51 in) long and 1–3.5 mm (0.039–0.138 in) wide with a sharp point on the end. "));
         plants.add(new Plant("Water Vine", R.drawable.j, "Central Lecture Theater Block", "Cissus hypoglauca is a large woody vine. The name water-vine comes from the fact that the woody sections of the vine may be cut into sections and the sap that drips from the sections may be drunk as water. The leaves are palmate, and are usually arranged in a group of five. Leaves elliptic or ovate in shape, slightly toothed or entire. Mid green above and a glaucous shade underneath, and measure 3 to 15 cm (1–6 in) long, 1.5 to 4 cm (0.6-1.6 in) wide. \n" +
                 "\n" +
