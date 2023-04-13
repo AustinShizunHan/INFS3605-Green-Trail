@@ -1,14 +1,19 @@
 package com.example.infs3634;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,11 +26,44 @@ public class PlantPageActivity extends AppCompatActivity {
     private EditText searchBar;
     private Button sortButton;
     private boolean ascendingOrder = true;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.plant_page);
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.search);
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home:
+                        launchHomeActivity();
+                        // handle Home tab selection
+                        return true;
+                    case R.id.location:
+                        launchMapActivity();
+                        // handle Profile tab selection
+                        return true;
+                    case R.id.search:
+//                        launchPlantPageActivity();
+                        // handle Home tab selection
+                        return true;
+                    case R.id.quiz:
+                        launchQuizActivity();
+                        // handle Search tab selection
+                        return true;
+                    case R.id.timeline:
+                        launchTimelineActivity();
+                        // handle Profile tab selection
+                        return true;
+                }
+                return false;
+            }
+        });
         plants = new ArrayList<>();
         plants.add(new Plant("Hill's Fig", R.drawable.abc, "G5 Blockhouse", "Hill's Fig is a large, evergreen tree that can grow up to 25 meters tall. It has a broad, spreading canopy and dense foliage that provides shade and shelter for a variety of wildlife. The leaves are glossy and dark green, with a smooth texture and pointed tips. The tree produces small, round fruit that are edible but not usually eaten by humans.\n" +
                 "\n" +
@@ -115,7 +153,30 @@ public class PlantPageActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {}
         });
 
-
     }
+    public void launchHomeActivity() {
+        Intent intent = new Intent(PlantPageActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+        public void launchQuizActivity() {
+            Intent intent = new Intent(PlantPageActivity.this, QuizStartPage.class);
+            startActivity(intent);
+        }
+
+//        public void launchPlantPageActivity() {
+//            Intent intent = new Intent(PlantPageActivity.this, PlantPageActivity.class);
+//            startActivity(intent);
+//        }
+
+        public void launchMapActivity() {
+            Intent intent = new Intent(PlantPageActivity.this, MapActivity.class);
+            startActivity(intent);
+        }
+
+        public void launchTimelineActivity() {
+            Intent intent = new Intent(PlantPageActivity.this, TimelineActivity.class);
+            startActivity(intent);
+        }
 
 }

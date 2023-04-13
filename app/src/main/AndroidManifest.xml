@@ -30,10 +30,6 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity
-            android:name=".AcknowledgePageActivity"
-            android:exported="true" />
-
 
         <activity
             android:name=".MapActivity"
@@ -65,14 +61,17 @@
 
 <!--        <activity-->
 <!--            android:name=".TimelineModel"-->
-<!--            android:exported="false" />-->
+<!--            android:exported="true" />-->
 
 <!--        <activity-->
 <!--            android:name=".TimelineAdapter"-->
-<!--            android:exported="false" />-->
+<!--            android:exported="true" />-->
 
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AcknowledgePageActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
