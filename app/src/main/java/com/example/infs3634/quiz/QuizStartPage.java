@@ -3,6 +3,7 @@ package com.example.infs3634.quiz;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -13,6 +14,8 @@ import com.example.infs3634.MainActivity;
 import com.example.infs3634.location.MapActivity;
 import com.example.infs3634.plant.PlantPageActivity;
 import com.example.infs3634.R;
+import com.example.infs3634.timeline.TimelineActivity;
+import com.example.infs3634.timeline.TimelineAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -32,6 +35,8 @@ public class QuizStartPage extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.quiz);
 
+        startButton.setOnClickListener(view -> launchQuizActivity());
+
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -40,17 +45,21 @@ public class QuizStartPage extends AppCompatActivity {
                         launchHomeActivity();
                         // handle Home tab selection
                         return true;
-                    case R.id.quiz:
-                        launchQuizActivity();
-                        // handle Search tab selection
-                        return true;
                     case R.id.location:
                         launchMapActivity();
                         // handle Profile tab selection
                         return true;
-                    case R.id.timeline:
-//                        launchTimelineActivity();
+                    case R.id.search:
+                        launchPlantPageActivity();
                         // handle Profile tab selection
+                        return true;
+                    case R.id.quiz:
+//                        launchQuizStartPage();
+                        // handle Search tab selection
+                        return true;
+                    case R.id.timeline:
+                        launchTimelineActivity();
+//                         handle Profile tab selection
                         return true;
                 }
                 return false;
@@ -63,18 +72,23 @@ public class QuizStartPage extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void launchPlantPageActivity() {
-        Intent intent = new Intent(QuizStartPage.this, PlantPageActivity.class);
-        startActivity(intent);
-    }
-
     public void launchMapActivity() {
         Intent intent = new Intent(QuizStartPage.this, MapActivity.class);
         startActivity(intent);
     }
+    public void launchPlantPageActivity() {
+        Intent intent = new Intent(QuizStartPage.this, PlantPageActivity.class);
+        startActivity(intent);
+    }
+    public void launchTimelineActivity() {
+        Intent intent = new Intent(QuizStartPage.this, TimelineActivity.class);
+        startActivity(intent);
+    }
 
+    //Click the start button to start the quiz
     public void launchQuizActivity() {
         Intent intent = new Intent(QuizStartPage.this, QuizActivity.class);
         startActivity(intent);
     }
+
 }
