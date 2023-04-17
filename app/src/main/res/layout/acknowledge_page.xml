@@ -71,14 +71,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="628dp"
         android:text="photo credit: David Clode "
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/left_ima" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
