@@ -1,20 +1,31 @@
-package com.example.infs3634;
+package com.example.infs3634.timeline;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.infs3634.MainActivity;
+import com.example.infs3634.R;
+import com.example.infs3634.location.MapActivity;
+import com.example.infs3634.plant.PlantPageActivity;
+import com.example.infs3634.quiz.QuizStartPage;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+
 import java.util.ArrayList;
 
 public class TimelineActivity extends AppCompatActivity {
-    TimelineModel TimelineModel;
+    com.example.infs3634.timeline.TimelineModel TimelineModel;
     ArrayList<TimelineModel> timelineArrayList;
-    TimelineAdapter TimelineAdapter;
+    com.example.infs3634.timeline.TimelineAdapter TimelineAdapter;
     RecyclerView timelineRecyclerview;
     TextView context;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +44,40 @@ public class TimelineActivity extends AppCompatActivity {
         timelineRecyclerview.setLayoutManager(layoutManager);
         timelineRecyclerview.setAdapter(TimelineAdapter);
 
-
         context = findViewById(R.id.timeline_content);
+
+        //using bar to switch between pages
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.timeline);
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home:
+                        launchHomeActivity();
+                        //handle Home tab selection
+                        return true;
+                    case R.id.location:
+                        launchMapActivity();
+                        // handle location tab selection
+                        return true;
+                    case R.id.search:
+                        launchPlantPageActivity();
+                        // handle search tab selection
+                        return true;
+                    case R.id.quiz:
+                        launchQuizActivity();
+                        // handle quiz tab selection
+                        return true;
+                    case R.id.timeline:
+//                        launchTimelineActivity();
+                        // handle time tab selection
+                        return true;
+                }
+                return false;
+            }
+        });
     }
 
 
@@ -66,6 +109,27 @@ public class TimelineActivity extends AppCompatActivity {
                 "help generate ideas for the Bush Tucker Trail by designing and " +
                 "pitching applications to stakeholders. " ));
         return timelineArrayList;
+    }
+
+    public void launchHomeActivity() {
+        Intent intent = new Intent(TimelineActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+    public void launchMapActivity() {
+        Intent intent = new Intent(TimelineActivity.this, MapActivity.class);
+        startActivity(intent);
+    }
+    public void launchPlantPageActivity() {
+        Intent intent = new Intent(TimelineActivity.this, PlantPageActivity.class);
+        startActivity(intent);
+    }
+    public void launchQuizActivity() {
+        Intent intent = new Intent(TimelineActivity.this, QuizStartPage.class);
+        startActivity(intent);
+    }
+    public void launchTimelineActivity() {
+        Intent intent = new Intent(TimelineActivity.this, TimelineActivity.class);
+        startActivity(intent);
     }
 }
 

@@ -1,4 +1,4 @@
-package com.example.infs3634;
+package com.example.infs3634.plant;
 
 public class Plant {
     private String name;

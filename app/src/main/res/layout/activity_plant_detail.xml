@@ -86,7 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        tools:context=".PlantDetailActivity">
+        tools:context=".plant.PlantDetailActivity">
 
         <TextView
             android:id="@+id/plant_name_text_view"

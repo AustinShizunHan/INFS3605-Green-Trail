@@ -1,4 +1,4 @@
-package com.example.infs3634;
+package com.example.infs3634.timeline;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.infs3634.R;
 
 import java.util.ArrayList;
 

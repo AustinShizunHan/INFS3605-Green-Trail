@@ -1,15 +1,18 @@
-package com.example.infs3634;
+package com.example.infs3634.quiz;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.infs3634.R;
 
 /**
  * Quiz activty is the screen which user attempts the quiz
@@ -24,6 +27,7 @@ public class QuizActivity extends AppCompatActivity {
     //declarations
     public static String INTENT_MESSAGE;
     TextView quizQuestion;
+    TextView playerName;
     Button nextBtn;
     RadioGroup radioGroup;
     RadioButton rbA, rbB, rbC, rbD;
@@ -53,17 +57,20 @@ public class QuizActivity extends AppCompatActivity {
     public static int mark = 0, correct = 0, wrong = 0;
 
     @Override
-    //start of the dog quiz activty
+    //start of the plant quiz activty
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_activity);
 
-        final TextView scoreStatus = (TextView) findViewById(R.id.tvscoreStatus);
+        TextView scoreStatus = (TextView) findViewById(R.id.tvscoreStatus);
 
-        //retrieves player's name from FireBase
-        TextView playerName = (TextView) findViewById(R.id.playerName);
-        Intent intent = getIntent();
-        String name = intent.getStringExtra("myname");
+        //retrieves player's name from EditText
+        playerName = findViewById(R.id.playerName);
+        String input = getIntent().getStringExtra("playerName");
+        if (input.trim().equals("")) //.trim to remove white space
+            playerName.setText("Hello Player");
+        else
+            playerName.setText("You're on a roll " + input + "!");
 
 
         // next button declarations

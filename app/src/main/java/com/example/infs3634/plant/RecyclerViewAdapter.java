@@ -1,8 +1,7 @@
-package com.example.infs3634;
+package com.example.infs3634.plant;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,23 +9,24 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.infs3634.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class ReserveRecyclerViewAdapter extends RecyclerView.Adapter<ReserveRecyclerViewAdapter.ViewHolder> implements Filterable {
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> implements Filterable {
 
     private List<Plant> plants;
     private List<Plant> filteredPlants;
     private Context context;
 
-    public ReserveRecyclerViewAdapter(List<Plant> plants, Context context) {
+    public RecyclerViewAdapter(List<Plant> plants, Context context) {
         this.plants = plants;
         this.context = context;
         this.filteredPlants = new ArrayList<>(plants);
@@ -35,7 +35,7 @@ public class ReserveRecyclerViewAdapter extends RecyclerView.Adapter<ReserveRecy
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.reserve_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.plant_item, parent, false);
         return new ViewHolder(view);
     }
 
@@ -83,8 +83,6 @@ public class ReserveRecyclerViewAdapter extends RecyclerView.Adapter<ReserveRecy
         };
     }
 
-
-
     public void sortByName(boolean ascending) {
         if (ascending) {
             Collections.sort(filteredPlants, new Comparator<Plant>() {
@@ -108,26 +106,12 @@ public class ReserveRecyclerViewAdapter extends RecyclerView.Adapter<ReserveRecy
         public TextView plantNameTextView;
         public TextView plantDetailsTextView;
         public ImageView plantImageView;
-        public ImageView iv_delete;
 
-        public ViewHolder(final View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
             plantNameTextView = itemView.findViewById(R.id.plant_name_text_view);
             plantDetailsTextView = itemView.findViewById(R.id.plant_details_text_view);
             plantImageView = itemView.findViewById(R.id.plant_image_view);
-            iv_delete = itemView.findViewById(R.id.iv_delete);
-            iv_delete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    MySqlite mySqlite=new MySqlite(itemView.getContext(),1);
-                    SQLiteDatabase db=mySqlite.getWritableDatabase();
-                    db.delete("record","name=?",new String[]{filteredPlants.get(getAdapterPosition()).getName()});
-                    db.close();
-                    Toast.makeText(itemView.getContext(), "delete success", Toast.LENGTH_SHORT).show();
-                    filteredPlants.remove(getAdapterPosition());
-                    notifyDataSetChanged();
-                }
-            });
             itemView.setOnClickListener(this);
         }
 
@@ -137,7 +121,7 @@ public class ReserveRecyclerViewAdapter extends RecyclerView.Adapter<ReserveRecy
             Plant plant = filteredPlants.get(position);
             Intent intent = new Intent(context, PlantDetailActivity.class);
             intent.putExtra("name", plant.getName());
-            intent.putExtra("details", plant.getDetails());
+            intent.putExtra("description", plant.getDescription());
             context.startActivity(intent);
         }
     }

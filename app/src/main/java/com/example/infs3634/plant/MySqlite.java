@@ -1,4 +1,4 @@
-package com.example.infs3634;
+package com.example.infs3634.plant;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

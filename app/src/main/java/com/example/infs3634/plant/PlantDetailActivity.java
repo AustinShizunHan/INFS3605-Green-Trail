@@ -1,4 +1,4 @@
-package com.example.infs3634;
+package com.example.infs3634.plant;
 
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.widget.Toast;
+
+import com.example.infs3634.R;
+
 public class PlantDetailActivity extends AppCompatActivity {
     private WebView webView;
     private static final String IFRAME_EMBED_CODE1 = "<iframe width=\"350\" height=\"300\" src=\"https://www.youtube.com/embed/Bz2QA3rJLEI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>";

@@ -32,40 +32,36 @@
 
 
         <activity
-            android:name=".MapActivity"
+            android:name=".location.MapActivity"
             android:exported="true" />
 
         <activity
-            android:name=".ReserveActivity"
+            android:name=".plant.ReserveActivity"
             android:exported="true"/>
 
         <activity
-            android:name=".PlantDetailActivity"
+            android:name=".plant.PlantDetailActivity"
             android:exported="true"/>
 
         <activity
-            android:name=".PlantPageActivity"
+            android:name=".plant.PlantPageActivity"
             android:exported="true"/>
 
         <activity
-            android:name=".QuizActivity"
+            android:name=".plant.QRScanActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".quiz.QuizActivity"
             android:exported="false"/>
 
         <activity
-            android:name=".QuizStartPage"
+            android:name=".quiz.QuizStartPage"
             android:exported="true"/>
 
         <activity
-            android:name=".TimelineActivity"
+            android:name=".timeline.TimelineActivity"
             android:exported="false" />
-
-<!--        <activity-->
-<!--            android:name=".TimelineModel"-->
-<!--            android:exported="true" />-->
-
-<!--        <activity-->
-<!--            android:name=".TimelineAdapter"-->
-<!--            android:exported="true" />-->
 
         <activity
             android:name=".MainActivity"
@@ -73,6 +69,7 @@
         <activity
             android:name=".AcknowledgePageActivity"
             android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
