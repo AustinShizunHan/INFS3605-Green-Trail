@@ -21,21 +21,33 @@ import com.google.android.material.navigation.NavigationBarView;
 
 
 public class QuizStartPage extends AppCompatActivity {
-    
+
+    EditText name;
     BottomNavigationView bottomNavigationView;
+    Button startButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_start);
 
-        Button startButton = (Button) findViewById(R.id.quizbutton);
-        final TextView nameText = (TextView) findViewById(R.id.textView);
-        final EditText nametext = (EditText) findViewById(R.id.editName);
+        startButton = findViewById(R.id.quizbutton);
+        name = findViewById(R.id.editName);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.quiz);
 
-        startButton.setOnClickListener(view -> launchQuizActivity());
+        startButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String playerName = name.getText().toString();
+                Intent intent = new Intent(QuizStartPage.this, QuizActivity.class);
+                intent.putExtra("playerName", playerName);
+                startActivity(intent);
+            }
+        });
+
+        //The start button to next page
+//        startButton.setOnClickListener(view -> launchQuizActivity());
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -92,6 +104,9 @@ public class QuizStartPage extends AppCompatActivity {
     //Click the start button to start the quiz
     public void launchQuizActivity() {
         Intent intent = new Intent(QuizStartPage.this, QuizActivity.class);
+        // Record the name user put in and shows in quiz page
+        String playername = name.getText().toString();
+        intent.putExtra("EditText",playername);
         startActivity(intent);
     }
 
