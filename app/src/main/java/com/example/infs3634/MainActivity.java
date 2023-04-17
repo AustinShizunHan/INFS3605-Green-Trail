@@ -6,7 +6,7 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.infs3634.location.MapActivity;
+import com.example.infs3634.location.MapViewActivity;
 import com.example.infs3634.plant.PlantPageActivity;
 import com.example.infs3634.quiz.QuizStartPage;
 import com.example.infs3634.timeline.TimelineActivity;
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchMapActivity() {
-        Intent intent = new Intent(MainActivity.this, MapActivity.class);
+        Intent intent = new Intent(MainActivity.this, MapViewActivity.class);
         startActivity(intent);
     }
 

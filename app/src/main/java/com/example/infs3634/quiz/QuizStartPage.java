@@ -6,16 +6,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.infs3634.MainActivity;
-import com.example.infs3634.location.MapActivity;
+import com.example.infs3634.location.MapViewActivity;
 import com.example.infs3634.plant.PlantPageActivity;
 import com.example.infs3634.R;
 import com.example.infs3634.timeline.TimelineActivity;
-import com.example.infs3634.timeline.TimelineAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -85,7 +83,7 @@ public class QuizStartPage extends AppCompatActivity {
     }
 
     public void launchMapActivity() {
-        Intent intent = new Intent(QuizStartPage.this, MapActivity.class);
+        Intent intent = new Intent(QuizStartPage.this, MapViewActivity.class);
         startActivity(intent);
     }
     public void launchPlantPageActivity() {

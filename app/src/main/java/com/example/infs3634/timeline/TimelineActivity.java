@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.infs3634.MainActivity;
+import com.example.infs3634.location.MapViewActivity;
 import com.example.infs3634.R;
-import com.example.infs3634.location.MapActivity;
 import com.example.infs3634.plant.PlantPageActivity;
 import com.example.infs3634.quiz.QuizStartPage;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -116,7 +116,7 @@ public class TimelineActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void launchMapActivity() {
-        Intent intent = new Intent(TimelineActivity.this, MapActivity.class);
+        Intent intent = new Intent(TimelineActivity.this, MapViewActivity.class);
         startActivity(intent);
     }
     public void launchPlantPageActivity() {
