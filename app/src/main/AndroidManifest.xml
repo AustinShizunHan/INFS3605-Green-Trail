@@ -48,6 +48,10 @@
             android:exported="true"/>
 
         <activity
+            android:name=".QRScanActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".quiz.QuizActivity"
             android:exported="false"/>
 
