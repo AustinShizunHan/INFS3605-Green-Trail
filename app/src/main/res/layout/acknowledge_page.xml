@@ -55,28 +55,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/left_ima" />
 
-    <ImageView
-        android:id="@+id/left_i"
-        android:layout_width="205dp"
-        android:layout_height="138dp"
-        android:src="@drawable/op"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.937" />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="512dp"
-        android:text="Enter "
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/left_ima" />
 
     <ImageView
         android:id="@+id/left_d"
