@@ -67,14 +67,6 @@
                 android:layout_height="match_parent"
                 android:src="@drawable/scan" />
 
-            <ImageView
-                android:id="@+id/plants_right_image"
-                android:layout_width="88dp"
-                android:layout_height="32dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/l1" />
-
         </LinearLayout>
 
         <View
@@ -93,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/white"
-                android:hint="Search"
+                android:hint="Search plant or location"
                 android:padding="8dp"
                 android:textSize="18sp" />
         </LinearLayout>

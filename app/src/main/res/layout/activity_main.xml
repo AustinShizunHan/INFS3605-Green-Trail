@@ -1,124 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-android:background="#D9D9D9">
-
-<LinearLayout
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="91dp"
-    android:background="#FFE600"
-    android:orientation="horizontal">
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/header_yellow"
+        android:layout_width="411dp"
+        android:layout_height="85dp"
+        android:background="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/left_image"
         android:layout_width="92dp"
         android:layout_height="66dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginStart="16dp"
         android:src="@drawable/unsw"
-        android:layout_marginLeft="16dp" />
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
+        app:layout_constraintBottom_toBottomOf="@+id/header_yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="@+id/header_yellow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.368" />
 
     <ImageView
         android:id="@+id/right_image"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:src="@drawable/bush" />
-</LinearLayout>
+        android:src="@drawable/bush"
+        app:layout_constraintBottom_toBottomOf="@+id/header_yellow"
+        app:layout_constraintEnd_toEndOf="@+id/header_yellow"
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toEndOf="@+id/left_image" />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/black"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/header_yellow2"
+        android:layout_width="565dp"
         android:layout_height="70dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="1dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/header_yellow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/header_yellow"
+        app:layout_constraintTop_toBottomOf="@+id/header_yellow" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Discover"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:layout_marginLeft="16dp" />
+    <TextView
+        android:id="@+id/timeline_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="Discover"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:fontFamily="sans-serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+    <ImageView
+        android:id="@+id/left_imag"
+        android:layout_width="382dp"
+        android:layout_height="317dp"
 
-        <ImageView
-            android:id="@+id/iv_reserve"
-            android:layout_width="75dp"
-            android:layout_height="31dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/li"
-            app:tint="@color/white" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_yellow2" />
 
-        <ImageView
-            android:id="@+id/plants_right_image"
-            android:layout_width="88dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/l1"
-            android:layout_marginRight="16dp" />
-    </LinearLayout>
-</LinearLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="526dp"
-        android:background="@android:color/white"
-        tools:context=".plant.PlantDetailActivity">
-
-        <ImageView
-            android:id="@+id/left_imag"
-            android:layout_width="382dp"
-            android:layout_height="317dp"
-
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="19dp"
-            android:src="@drawable/home" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="241dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="9dp"
-            android:layout_marginBottom="-45dp"
-            android:text=" Built on top of an ancient landscape
-The UNSW Kensington Campus is a veneer built on top of an ancient landscape of high sand dunes and swampy swales. They are tens of thousands of years old and many metres deep.
-"
-            android:textColor="#070707"
-            android:textSize="24sp" />
-    </RelativeLayout>
+    <TextView
+        android:layout_width="386dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:text="The UNSW Kensington Campus is a veneer built on top of an ancient landscape of high sand dunes and swampy swales. They are tens of thousands of years old and many metres deep. "
+        android:textColor="#070707"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/left_imag" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -130,4 +106,4 @@ The UNSW Kensington Campus is a veneer built on top of an ancient landscape of h
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
