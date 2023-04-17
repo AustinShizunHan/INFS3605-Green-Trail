@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -31,6 +33,7 @@ public class PlantPageActivity extends AppCompatActivity {
     private EditText searchBar;
     private Button sortButton;
     private boolean ascendingOrder = true;
+    private ImageButton imageButton;
     BottomNavigationView bottomNavigationView;
 
     @Override
@@ -38,9 +41,9 @@ public class PlantPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.plant_page);
 
+        // Use bottom navigation bar to switch between pages
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.search);
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -69,6 +72,20 @@ public class PlantPageActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        //Press image button to open QR code page
+        ImageButton imagebutton = findViewById(R.id.imageButton);
+        imagebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to launch the QRScanActivity
+                Intent intent = new Intent(PlantPageActivity.this, QRScanActivity.class);
+                // Start the QRScanActivity
+                startActivity(intent);
+            }
+        });
+
+        // Put plants info into the list
         plants = new ArrayList<>();
         plants.add(new Plant("Hill's Fig", R.drawable.abc, "G5 Blockhouse", "Hill's Fig is a large, evergreen tree that can grow up to 25 meters tall. It has a broad, spreading canopy and dense foliage that provides shade and shelter for a variety of wildlife. The leaves are glossy and dark green, with a smooth texture and pointed tips. The tree produces small, round fruit that are edible but not usually eaten by humans.\n" +
                 "\n" +
@@ -159,29 +176,26 @@ public class PlantPageActivity extends AppCompatActivity {
         });
 
     }
+
+    // 4 Different page launchActivity class
     public void launchHomeActivity() {
         Intent intent = new Intent(PlantPageActivity.this, MainActivity.class);
         startActivity(intent);
     }
 
-        public void launchQuizActivity() {
+    public void launchQuizActivity() {
             Intent intent = new Intent(PlantPageActivity.this, QuizStartPage.class);
             startActivity(intent);
-        }
+    }
 
-        public void launchPlantPageActivity() {
-            Intent intent = new Intent(PlantPageActivity.this, PlantPageActivity.class);
-            startActivity(intent);
-        }
-
-        public void launchMapActivity() {
+    public void launchMapActivity() {
             Intent intent = new Intent(PlantPageActivity.this, MapActivity.class);
             startActivity(intent);
-        }
+    }
 
-        public void launchTimelineActivity() {
+    public void launchTimelineActivity() {
             Intent intent = new Intent(PlantPageActivity.this, TimelineActivity.class);
             startActivity(intent);
-        }
+    }
 
 }
