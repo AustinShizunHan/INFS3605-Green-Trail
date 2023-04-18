@@ -18,8 +18,8 @@
         android:icon="@drawable/star_quiz"
         android:id="@+id/quiz"/>
 
-    <item android:title="Timeline"
-        android:icon="@drawable/timeline_png"
-        android:id="@+id/timeline"/>
+    <item android:title="Scan"
+        android:icon="@drawable/qrc"
+        android:id="@+id/scancode"/>
     />
 </menu>

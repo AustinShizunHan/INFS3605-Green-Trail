@@ -71,10 +71,10 @@
 
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/timeline"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/scan" />
+                android:src="@drawable/timeline_png" />
 
 
         </LinearLayout>

@@ -67,7 +67,7 @@
                 android:layout_height="32dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="16dp"
-                android:src="@drawable/l1"
+                android:src="@drawable/favr"
                 android:layout_marginRight="16dp" />
 
         </LinearLayout>

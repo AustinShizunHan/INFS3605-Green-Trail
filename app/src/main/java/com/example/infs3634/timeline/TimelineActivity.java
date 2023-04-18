@@ -13,6 +13,7 @@ import com.example.infs3634.MainActivity;
 import com.example.infs3634.location.MapViewActivity;
 import com.example.infs3634.R;
 import com.example.infs3634.plant.PlantPageActivity;
+import com.example.infs3634.plant.QRScanActivity;
 import com.example.infs3634.quiz.QuizStartPage;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -48,7 +49,7 @@ public class TimelineActivity extends AppCompatActivity {
 
         //using bar to switch between pages
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.timeline);
+        bottomNavigationView.setSelectedItemId(R.id.scancode);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -70,7 +71,7 @@ public class TimelineActivity extends AppCompatActivity {
                         launchQuizActivity();
                         // handle quiz tab selection
                         return true;
-                    case R.id.timeline:
+                    case R.id.scancode:
 //                        launchTimelineActivity();
                         // handle time tab selection
                         return true;
@@ -127,8 +128,8 @@ public class TimelineActivity extends AppCompatActivity {
         Intent intent = new Intent(TimelineActivity.this, QuizStartPage.class);
         startActivity(intent);
     }
-    public void launchTimelineActivity() {
-        Intent intent = new Intent(TimelineActivity.this, TimelineActivity.class);
+    public void launchQRScanActivity() {
+        Intent intent = new Intent(TimelineActivity.this, QRScanActivity.class);
         startActivity(intent);
     }
 }

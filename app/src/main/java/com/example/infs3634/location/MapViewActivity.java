@@ -114,10 +114,11 @@ public class MapViewActivity extends AppCompatActivity implements OnMapReadyCall
                         launchQuizActivity();
                         // handle quiz tab selection
                         return true;
-                    case R.id.timeline:
-                        launchTimelineActivity();
-                        // handle timeline tab selection
+                    case R.id.scancode:
+                        launchQuizActivity();
+
                         return true;
+
                 }
                 return false;
             }

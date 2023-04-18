@@ -67,7 +67,7 @@ public class QuizStartPage extends AppCompatActivity {
 //                        launchQuizStartPage();
                         // handle quiz tab selection
                         return true;
-                    case R.id.timeline:
+                    case R.id.scancode:
                         launchTimelineActivity();
 //                         handle timeline tab selection
                         return true;

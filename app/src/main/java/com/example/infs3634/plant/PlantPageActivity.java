@@ -64,7 +64,7 @@ public class PlantPageActivity extends AppCompatActivity {
                         launchQuizActivity();
                         // handle quiz tab selection
                         return true;
-                    case R.id.timeline:
+                    case R.id.scancode:
                         launchTimelineActivity();
                         // handle timeline tab selection
                         return true;
@@ -74,12 +74,12 @@ public class PlantPageActivity extends AppCompatActivity {
         });
 
         //Press image button to open QR code page
-        ImageButton imagebutton = findViewById(R.id.imageButton);
+        ImageButton imagebutton = findViewById(R.id.timeline);
         imagebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Create an Intent to launch the QRScanActivity
-                Intent intent = new Intent(PlantPageActivity.this, QRScanActivity.class);
+                Intent intent = new Intent(PlantPageActivity.this, TimelineActivity.class);
                 // Start the QRScanActivity
                 startActivity(intent);
             }
