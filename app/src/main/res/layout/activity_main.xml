@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
-    <TextView
+        <TextView
         android:id="@+id/header_yellow"
         android:layout_width="411dp"
         android:layout_height="85dp"
@@ -63,8 +74,8 @@
         app:layout_constraintTop_toBottomOf="@+id/header_yellow2" />
 
     <TextView
-        android:layout_width="369dp"
-        android:layout_height="183dp"
+        android:layout_width="356dp"
+        android:layout_height="142dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="32dp"
@@ -72,23 +83,12 @@
         android:layout_marginBottom="16dp"
         android:text="The UNSW Kensington Campus is a veneer built on top of an ancient landscape of high sand dunes and swampy swales. They are tens of thousands of years old and many metres deep. "
         android:textColor="#070707"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        android:textSize="20sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/left_imag" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
 
     <TextView
         android:id="@+id/discover_title"
@@ -108,3 +108,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+android:id="@+id/bottomNavigationView"
+android:layout_width="match_parent"
+android:layout_height="55dp"
+app:itemIconTint="@color/black"
+app:itemTextColor="@color/black"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.0"
+app:layout_constraintStart_toStartOf="parent"
+app:menu="@menu/bottom_nav_menu" />
+
+    </LinearLayout>

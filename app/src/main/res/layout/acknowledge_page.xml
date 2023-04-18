@@ -38,15 +38,16 @@
         android:text="Acknowledgement of Country"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        android:typeface="monospace"
+        android:typeface="sans"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/left_ima" />
+
 
     <TextView
         android:layout_width="355dp"
         android:layout_height="362dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="92dp"
         android:gravity="center"
         android:text="UNSW is on Bidjigal Country and we acknowledge Elders past and present, and the emerging generation, and our Indigenous colleagues with us on campus "
         android:textColor="#FFFFFF"
@@ -54,7 +55,6 @@
         android:typeface="sans"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/left_ima" />
-
 
     <ImageView
         android:id="@+id/left_d"

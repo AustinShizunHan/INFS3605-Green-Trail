@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.widget.Toast;
 
+
+
 import com.example.infs3634.R;
 
 public class PlantDetailActivity extends AppCompatActivity {
@@ -68,5 +70,8 @@ public class PlantDetailActivity extends AppCompatActivity {
             webView.loadDataWithBaseURL("https://www.youtube.com", IFRAME_EMBED_CODE2, "text/html", "utf-8", "https://developers.google.com/youtube/iframe_api_reference?hl=zh-cn");
         }
 
-    }
-}
+
+
+            }
+        }
+
