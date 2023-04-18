@@ -2,6 +2,7 @@ package com.example.infs3634.quiz;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +13,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.infs3634.MainActivity;
 import com.example.infs3634.R;
+import com.example.infs3634.location.MapViewActivity;
+import com.example.infs3634.plant.PlantDetailActivity;
+import com.example.infs3634.plant.PlantPageActivity;
+import com.example.infs3634.plant.QRScanActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 /**
  * Quiz activty is the screen which user attempts the quiz
@@ -63,6 +71,7 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.quiz_activity);
 
         TextView scoreStatus = (TextView) findViewById(R.id.tvscoreStatus);
+        BottomNavigationView bottomNavigationView;
 
         //retrieves player's name from EditText
         playerName = findViewById(R.id.playerName);
@@ -139,7 +148,62 @@ public class QuizActivity extends AppCompatActivity {
 
         });
 
+//handle bottomNavigationBar (switch pages)
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home:
+                        launchHomeActivity();
+                        // handle Home tab selection
+                        return true;
+                    case R.id.location:
+                        launchMapActivity();
+                        // handle location tab selection
+                        return true;
+                    case R.id.search:
+                        launchPlantPageActivity();
+                        // handle search tab selection
+                        return true;
+                    case R.id.quiz:
+                        launchQuizActivity();
+                        // handle quiz tab selection
+                        return true;
+                    case R.id.scancode:
+                        launchQRScanActivity();
+                        // handle timeline tab selection
+                        return true;
+                }
+                return false;
+            }
+        });
+    }
 
+    public void launchHomeActivity() {
+        Intent intent = new Intent(QuizActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchQuizActivity() {
+        Intent intent = new Intent(QuizActivity.this, QuizStartPage.class);
+        startActivity(intent);
+    }
+
+    public void launchPlantPageActivity() {
+        Intent intent = new Intent(QuizActivity.this, PlantPageActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchMapActivity() {
+        Intent intent = new Intent(QuizActivity.this, MapViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void launchQRScanActivity() {
+        Intent intent = new Intent(QuizActivity.this, QRScanActivity.class);
+        startActivity(intent);
     }
 }
 
