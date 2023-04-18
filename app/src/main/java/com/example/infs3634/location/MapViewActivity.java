@@ -92,120 +92,7 @@ public class MapViewActivity extends AppCompatActivity implements OnMapReadyCall
         mMapView.onCreate(savedInstanceState);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.location);
-
-        mMapView.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(GoogleMap googleMap) {
-                mGoogleMap = googleMap;
-                mUiSettings = mGoogleMap.getUiSettings();
-
-                // Set up the Google Map with desired options
-                mUiSettings.setZoomControlsEnabled(true);
-                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Plant23,15));
-
-                //Add Markers
-                marker1 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant1)
-                        .title("Hills Fig"));
-
-                marker2 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant2)
-                        .title("Gymea Lily"));
-
-                marker3 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant3)
-                        .title("Broad-leaved Paperbark"));
-
-                marker4 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant4)
-                        .title("Crimson Bottlebrush"));
-
-                marker5 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant5)
-                        .title("Heath Banksia"));
-
-                marker6 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant6)
-                        .title("Mountain Ceder Wattle"));
-
-                marker7 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant7)
-                        .title("Native Mint"));
-
-                marker8 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant8)
-                        .title("Tuckeroo"));
-
-                marker9 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant9)
-                        .title("Prickly Leaved tea Tree"));
-
-                marker10 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant10)
-                        .title("Water Vine"));
-
-                marker11 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant11)
-                        .title("Rock Lily"));
-
-                marker12 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant12)
-                        .title("Sandpaper Fig"));
-
-                marker13 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant13)
-                        .title("Burrawang"));
-
-                marker14 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant14)
-                        .title("Plum Pine/Brown Pine"));
-
-                marker15 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant15)
-                        .title("Tussock Grass"));
-
-                marker16 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant16)
-                        .title("Cabbage Tree Palm"));
-
-                marker17 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant17)
-                        .title("Bolwarra"));
-
-                marker18 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant18)
-                        .title("Blue Flax Lily"));
-
-                marker19 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant19)
-                        .title("Old Man Banksia"));
-
-                marker20 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant20)
-                        .title("Matrush"));
-
-                marker21 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant21)
-                        .title("Ribery"));
-
-                marker22 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant22)
-                        .title("Grass Tree"));
-
-                marker23 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant23)
-                        .title("Native Ginger"));
-
-                marker24 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant24)
-                        .title("Flame Tree"));
-
-                marker25 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant25)
-                        .title("Port Jackson Fig"));
-
-            }
-        });
+        //mMapView.getMapAsync(this);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -266,7 +153,115 @@ public class MapViewActivity extends AppCompatActivity implements OnMapReadyCall
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mGoogleMap.setOnInfoWindowClickListener(this);
+        mGoogleMap = googleMap;
+        mUiSettings = mGoogleMap.getUiSettings();
+
+        // Set up the Google Map with desired options
+        mUiSettings.setZoomControlsEnabled(true);
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Plant23,15));
+
+        //Add Markers
+        marker1 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant1)
+                .title("Hills Fig"));
+
+        marker2 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant2)
+                .title("Gymea Lily"));
+
+        marker3 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant3)
+                .title("Broad-leaved Paperbark"));
+
+        marker4 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant4)
+                .title("Crimson Bottlebrush"));
+
+        marker5 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant5)
+                .title("Heath Banksia"));
+
+        marker6 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant6)
+                .title("Mountain Ceder Wattle"));
+
+        marker7 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant7)
+                .title("Native Mint"));
+
+        marker8 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant8)
+                .title("Tuckeroo"));
+
+        marker9 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant9)
+                .title("Prickly Leaved tea Tree"));
+
+        marker10 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant10)
+                .title("Water Vine"));
+
+        marker11 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant11)
+                .title("Rock Lily"));
+
+        marker12 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant12)
+                .title("Sandpaper Fig"));
+
+        marker13 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant13)
+                .title("Burrawang"));
+
+        marker14 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant14)
+                .title("Plum Pine/Brown Pine"));
+
+        marker15 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant15)
+                .title("Tussock Grass"));
+
+        marker16 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant16)
+                .title("Cabbage Tree Palm"));
+
+        marker17 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant17)
+                .title("Bolwarra"));
+
+        marker18 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant18)
+                .title("Blue Flax Lily"));
+
+        marker19 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant19)
+                .title("Old Man Banksia"));
+
+        marker20 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant20)
+                .title("Matrush"));
+
+        marker21 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant21)
+                .title("Ribery"));
+
+        marker22 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant22)
+                .title("Grass Tree"));
+
+        marker23 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant23)
+                .title("Native Ginger"));
+
+        marker24 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant24)
+                .title("Flame Tree"));
+
+        marker25 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant25)
+                .title("Port Jackson Fig"));
     }
+
     @Override
     public void onInfoWindowClick(Marker marker) {
         // Launch the new activity or fragment here
