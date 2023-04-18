@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/light_yellow">
 
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_height="64dp"
         android:layout_centerInParent="true"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="70dp"
         android:ems="10"
         android:gravity="center"
@@ -82,7 +82,7 @@
         android:id="@+id/quizbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="52dp"
         android:backgroundTint="@color/brown"
         android:text="Start"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
@@ -90,17 +90,33 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/quizpic"
+        android:layout_width="400dp"
+        android:layout_height="211dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/brown"
+
+        android:src="@drawable/quiz"
+        app:layout_constraintBottom_toTopOf="@+id/welcomeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        app:layout_constraintVertical_bias="1.0" />
+
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="363dp"
         android:layout_height="77dp"
+        android:layout_marginTop="172dp"
         android:fontFamily="sans-serif-medium"
-        android:text="grab your friends and go for a bush tucker adventure!"
 
+        android:text="grab your friends and go for a bush tucker adventure!"
         android:textColor="@color/gold"
         android:textSize="28sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
