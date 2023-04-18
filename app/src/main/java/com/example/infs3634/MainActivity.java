@@ -1,8 +1,11 @@
 package com.example.infs3634;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,15 +20,18 @@ import com.google.android.material.navigation.NavigationBarView;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    ImageView Nura_gili;
+    ImageView Guruwaal_Stories;
+    ImageView BTT_timeline;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //handle bottomNavigationBar (switch pages)
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.home);
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -54,6 +60,39 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        // Click Nura Gili image jump to the website
+        Nura_gili = findViewById(R.id.Nura_gili);
+        Nura_gili.setClickable(true);
+        Nura_gili.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.indigenous.unsw.edu.au"));
+                startActivity(browserIntent);
+            }
+        });
+
+        // Click Guruwaal_Stories image jump to the website
+        Guruwaal_Stories = findViewById(R.id.Guruwaal_stories);
+        Guruwaal_Stories.setClickable(true);
+        Guruwaal_Stories.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.indigenous.unsw.edu.au/strategy/culture-and-country/guruwaal-stories"));
+                startActivity(browserIntent);
+            }
+        });
+
+        //Click bush tack trail image jump to timeline page
+        BTT_timeline = findViewById(R.id.BTT_timeline);
+        BTT_timeline.setClickable(true);
+        BTT_timeline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchTimelineActivity();
+            }
+        });
+
     }
 
     public void launchHomeActivity() {
@@ -79,8 +118,10 @@ public class MainActivity extends AppCompatActivity {
     public void launchTimelineActivity() {
         Intent intent = new Intent(MainActivity.this, TimelineActivity.class);
         startActivity(intent);
+
     }
     public void launchQRScanActivity() {
         Intent intent = new Intent(MainActivity.this, QRScanActivity.class);
         startActivity(intent);
-}}
+    }
+}
