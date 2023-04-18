@@ -72,6 +72,14 @@
 
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/line1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:src="@drawable/line" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="16dp" />

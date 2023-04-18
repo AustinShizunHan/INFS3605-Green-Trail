@@ -7,11 +7,11 @@
     android:background="#D9D9D9">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="91dp"
-            android:background="#FFE600"
-            android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        android:background="#FFE600"
+        android:orientation="horizontal">
         <ImageView
             android:id="@+id/left_image"
             android:layout_width="92dp"
@@ -39,24 +39,24 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="78dp"
         android:background="@color/black"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="53dp"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:text="Plants"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:layout_marginLeft="16dp" />
+                android:textSize="24sp" />
 
             <View
                 android:layout_width="0dp"
@@ -70,15 +70,25 @@
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/li"
                 app:tint="@color/white" />
+
             <ImageView
                 android:id="@+id/plants_right_image"
                 android:layout_width="88dp"
                 android:layout_height="32dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginEnd="16dp"
-                android:src="@drawable/l1"
-                android:layout_marginRight="16dp" />
+                android:layout_marginRight="16dp"
+                android:src="@drawable/l1" />
+
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/line1"
+            android:layout_width="200dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/line" />
+
     </LinearLayout>
 
     <RelativeLayout
@@ -126,23 +136,24 @@
             android:layout_marginEnd="76dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="76dp" />
+
     </RelativeLayout>
 
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="113dp"
+        android:layout_height="320dp"
         android:layout_weight="1"></WebView>
 
-<androidx.recyclerview.widget.RecyclerView
-android:id="@+id/timelineRecyclerview"
-android:layout_width="389dp"
-android:layout_height="42dp"
-android:layout_marginTop="8dp"
-app:layout_constraintEnd_toEndOf="parent"
-app:layout_constraintHorizontal_bias="0.0"
-app:layout_constraintStart_toStartOf="@+id/timeline_content"
-app:layout_constraintTop_toBottomOf="@+id/timeline_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/timelineRecyclerview"
+        android:layout_width="389dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/timeline_content"
+        app:layout_constraintTop_toBottomOf="@+id/timeline_content">
 
-</androidx.recyclerview.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>
