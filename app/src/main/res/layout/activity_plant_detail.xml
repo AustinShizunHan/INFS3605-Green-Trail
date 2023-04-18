@@ -64,14 +64,6 @@
                 android:layout_weight="1" />
 
             <ImageView
-                android:id="@+id/iv_reserve"
-                android:layout_width="78dp"
-                android:layout_height="33dp"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/li"
-                app:tint="@color/white" />
-
-            <ImageView
                 android:id="@+id/plants_right_image"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
@@ -94,7 +86,7 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="58dp"
         android:background="@android:color/white"
         tools:context=".plant.PlantDetailActivity">
 
@@ -133,21 +125,68 @@
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="248dp">
+        android:layout_height="233dp">
 
     </WebView>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/plant_details_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Test Plant Details"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:layout_height="166dp">
+
+        <TextView
+            android:id="@+id/plant_details_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Test Plant Details"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
     </ScrollView>
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@android:color/white"
+        tools:context=".plant.PlantDetailActivity">
 
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="117dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/iv_reserve"
+            android:layout_width="145dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/li"
+            app:tint="#B8A407" />
+
+        <ImageView
+            android:id="@+id/locatep"
+            android:layout_width="101dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/locateplant" />
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="#070707"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+</LinearLayout>
