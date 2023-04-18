@@ -13,6 +13,7 @@ import com.example.infs3634.MainActivity;
 import com.example.infs3634.location.MapViewActivity;
 import com.example.infs3634.plant.PlantPageActivity;
 import com.example.infs3634.R;
+import com.example.infs3634.plant.QRScanActivity;
 import com.example.infs3634.timeline.TimelineActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -68,7 +69,7 @@ public class QuizStartPage extends AppCompatActivity {
                         // handle quiz tab selection
                         return true;
                     case R.id.scancode:
-                        launchTimelineActivity();
+                        launchQRScanActivity();
 //                         handle timeline tab selection
                         return true;
                 }
@@ -94,8 +95,8 @@ public class QuizStartPage extends AppCompatActivity {
         Intent intent = new Intent(QuizStartPage.this, QuizStartPage.class);
         startActivity(intent);
     }
-    public void launchTimelineActivity() {
-        Intent intent = new Intent(QuizStartPage.this, TimelineActivity.class);
+    public void launchQRScanActivity() {
+        Intent intent = new Intent(QuizStartPage.this, QRScanActivity.class);
         startActivity(intent);
     }
 

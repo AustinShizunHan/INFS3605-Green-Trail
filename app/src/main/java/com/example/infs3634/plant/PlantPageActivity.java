@@ -65,7 +65,7 @@ public class PlantPageActivity extends AppCompatActivity {
                         // handle quiz tab selection
                         return true;
                     case R.id.scancode:
-                        launchTimelineActivity();
+                        launchQRScanActivity();
                         // handle timeline tab selection
                         return true;
                 }
@@ -195,8 +195,8 @@ public class PlantPageActivity extends AppCompatActivity {
             startActivity(intent);
     }
 
-    public void launchTimelineActivity() {
-            Intent intent = new Intent(PlantPageActivity.this, TimelineActivity.class);
+    public void launchQRScanActivity() {
+            Intent intent = new Intent(PlantPageActivity.this,QRScanActivity.class);
             startActivity(intent);
     }
 

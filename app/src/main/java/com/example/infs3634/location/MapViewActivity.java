@@ -11,6 +11,7 @@ import com.example.infs3634.MainActivity;
 import com.example.infs3634.R;
 import com.example.infs3634.plant.PlantDetailActivity;
 import com.example.infs3634.plant.PlantPageActivity;
+import com.example.infs3634.plant.QRScanActivity;
 import com.example.infs3634.quiz.QuizStartPage;
 import com.example.infs3634.timeline.TimelineActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -115,7 +116,7 @@ public class MapViewActivity extends AppCompatActivity implements OnMapReadyCall
                         // handle quiz tab selection
                         return true;
                     case R.id.scancode:
-                        launchQuizActivity();
+                        launchQRScanActivity();
 
                         return true;
 
@@ -145,8 +146,8 @@ public class MapViewActivity extends AppCompatActivity implements OnMapReadyCall
         startActivity(intent);
     }
 
-    public void launchTimelineActivity() {
-        Intent intent = new Intent(MapViewActivity.this, TimelineActivity.class);
+    public void launchQRScanActivity() {
+        Intent intent = new Intent(MapViewActivity.this, QRScanActivity.class);
         startActivity(intent);
     }
 

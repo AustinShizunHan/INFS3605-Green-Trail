@@ -72,7 +72,7 @@ public class TimelineActivity extends AppCompatActivity {
                         // handle quiz tab selection
                         return true;
                     case R.id.scancode:
-//                        launchTimelineActivity();
+                    launchQRScanActivity();
                         // handle time tab selection
                         return true;
                 }
