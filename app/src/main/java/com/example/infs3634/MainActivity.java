@@ -14,6 +14,7 @@ import com.example.infs3634.plant.PlantPageActivity;
 import com.example.infs3634.plant.QRScanActivity;
 import com.example.infs3634.quiz.QuizStartPage;
 import com.example.infs3634.timeline.TimelineActivity;
+import com.google.android.gms.maps.MapView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
