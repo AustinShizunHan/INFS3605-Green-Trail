@@ -53,11 +53,19 @@ public class QuizActivity extends AppCompatActivity {
     };
     //array storing quiz options
     String options[] = {
-            "1, 7, 9, 12",
-            "Edible pea flower, Edible plant flower, Edible stem flower, None of the above",
-            "Blue Flax Lily, Native Ginger, Grass Tree, Riberry",
-            "Native mint,Banksia, Crimson Bottlebrush, Paperbark",
-            "Plum Pine,  Native Mint,Riberry, Port Jackson Fig" };
+            "1", "7", "9", "12",
+            "Edible pea flower", "Edible plant flower", "Edible stem flower", "None of the above",
+            "Blue Flax Lily", "Native Ginger", "Grass Tree", "Riberry",
+            "Native mint", "Banksia", "Crimson Bottlebrush", "Paperbark",
+            "Plum Pine", "Native Mint", "Riberry", "Port Jackson Fig"
+    };
+
+
+
+
+
+
+
 
     //flag = boolean variable and signals when conditions do exist in the program
     //used to declare if
@@ -88,11 +96,13 @@ public class QuizActivity extends AppCompatActivity {
         quizQuestion = (TextView) findViewById(R.id.tvquizQuestion);
 
         //declarations
-        radioGroup = (RadioGroup) findViewById(R.id.answerOptions);
-        rbA = (RadioButton) findViewById(R.id.rb1);
-        rbB = (RadioButton) findViewById(R.id.rb2);
-        rbC = (RadioButton) findViewById(R.id.rb3);
-        rbD = (RadioButton) findViewById(R.id.rb4);
+        RadioGroup radioGroup = findViewById(R.id.answerOptions);
+        TextView quizQuestion = findViewById(R.id.tvquizQuestion);
+        RadioButton rbA = findViewById(R.id.rb1);
+        RadioButton rbB = findViewById(R.id.rb2);
+        RadioButton rbC = findViewById(R.id.rb3);
+        RadioButton rbD = findViewById(R.id.rb4);
+
         quizQuestion.setText(questions[flag]);
         rbA.setText(options[0]);
         rbB.setText(options[1]);
@@ -100,7 +110,8 @@ public class QuizActivity extends AppCompatActivity {
         rbD.setText(options[3]);
 
 //4 options
-        nextBtn.setOnClickListener(new View.OnClickListener() {
+        Button nextButton = findViewById(R.id.nxtBtn);
+        nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -141,6 +152,7 @@ public class QuizActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), QuizResults.class);
                     startActivity(intent);
                 }
+
                 //clear selection
                 radioGroup.clearCheck();
 

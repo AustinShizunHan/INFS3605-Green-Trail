@@ -11,7 +11,7 @@
         android:id="@+id/header_yellow2"
         android:layout_width="553dp"
         android:layout_height="61dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="0dp"
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/header_yellow"
         app:layout_constraintHorizontal_bias="0.0"
