@@ -25,7 +25,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class MapViewActivity extends AppCompatActivity implements GoogleMap.OnInfoWindowClickListener{
+public abstract class MapViewActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener{
 
     private final LatLng Plant1 = new LatLng(-33.917285252570245, 151.22632669113395);
     private final LatLng Plant2 = new LatLng(-33.916645315222944, 151.2262411027797);
@@ -84,13 +84,7 @@ public class MapViewActivity extends AppCompatActivity implements GoogleMap.OnIn
     UiSettings mUiSettings;
     BottomNavigationView bottomNavigationView;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.mapview_page);
-
-        mMapView = findViewById(R.id.mapView);
-        mMapView.onCreate(savedInstanceState);
+    public void getMapAsync (OnMapReadyCallback callback){
 
         mMapView.getMapAsync(new OnMapReadyCallback() {
             @Override
@@ -205,6 +199,17 @@ public class MapViewActivity extends AppCompatActivity implements GoogleMap.OnIn
                         .title("Port Jackson Fig"));
             }
         });
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.mapview_page);
+
+        mMapView = findViewById(R.id.mapView);
+        mMapView.onCreate(savedInstanceState);
+
+
 
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -272,4 +277,5 @@ public class MapViewActivity extends AppCompatActivity implements GoogleMap.OnIn
         Intent intent = new Intent(this, PlantDetailActivity.class);
         startActivity(intent);
     }
+
 }

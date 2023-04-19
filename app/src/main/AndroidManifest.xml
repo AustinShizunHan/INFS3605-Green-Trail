@@ -72,9 +72,14 @@
             android:name=".location.MapViewActivity"
             android:exported="true" />
 
+
         <activity
             android:name=".AcknowledgePageActivity"
-            android:exported="true" >
+            android:exported="true" />
+
+            <activity
+                android:name=".MapActivity"
+                android:exported="true" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

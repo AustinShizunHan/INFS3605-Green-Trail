@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Click Nura Gili image jump to the website
+        // Click Nura Gili image (referred from the website below) jump to the website
         Nura_gili = findViewById(R.id.Nura_gili);
         Nura_gili.setClickable(true);
         Nura_gili.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Click Guruwaal_Stories image jump to the website
+        // Click Guruwaal_Stories image (referred from the website below) jump to the website
         Guruwaal_Stories = findViewById(R.id.Guruwaal_stories);
         Guruwaal_Stories.setClickable(true);
         Guruwaal_Stories.setOnClickListener(new View.OnClickListener() {
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Click bush tack trail image jump to timeline page
+        //Click bush tack trail image (referred from the website below) jump to timeline page
         BTT_timeline = findViewById(R.id.BTT_timeline);
         BTT_timeline.setClickable(true);
         BTT_timeline.setOnClickListener(new View.OnClickListener() {
