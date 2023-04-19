@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.infs3634.location.MapViewActivity;
 import com.example.infs3634.plant.PlantPageActivity;
 import com.example.infs3634.plant.QRScanActivity;
+import com.example.infs3634.plant.ReserveActivity;
 import com.example.infs3634.quiz.QuizStartPage;
 import com.example.infs3634.timeline.TimelineActivity;
 import com.google.android.gms.maps.MapView;
@@ -59,6 +60,18 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                 }
                 return false;
+            }
+        });
+
+        //Press list button to open favorite plant page
+        ImageView list_button = findViewById(R.id.plants_right_image);
+        list_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to launch the QRScanActivity
+                Intent intent = new Intent(MainActivity.this, ReserveActivity.class);
+                // Start the QRScanActivity
+                startActivity(intent);
             }
         });
 

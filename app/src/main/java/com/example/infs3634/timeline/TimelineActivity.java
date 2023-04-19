@@ -3,6 +3,8 @@ package com.example.infs3634.timeline;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,7 @@ import com.example.infs3634.location.MapViewActivity;
 import com.example.infs3634.R;
 import com.example.infs3634.plant.PlantPageActivity;
 import com.example.infs3634.plant.QRScanActivity;
+import com.example.infs3634.plant.ReserveActivity;
 import com.example.infs3634.quiz.QuizStartPage;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -79,8 +82,20 @@ public class TimelineActivity extends AppCompatActivity {
                 return false;
             }
         });
-    }
 
+        //Press list button to open favorite plant page
+        ImageView list_button = findViewById(R.id.plants_right_image);
+        list_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to launch the QRScanActivity
+                Intent intent = new Intent(TimelineActivity.this, ReserveActivity.class);
+                // Start the QRScanActivity
+                startActivity(intent);
+            }
+        });
+
+    }
 
     // method to fill array with data
     public static ArrayList<TimelineModel> getTimelineData() {

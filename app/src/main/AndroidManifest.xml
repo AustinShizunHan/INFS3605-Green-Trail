@@ -75,15 +75,13 @@
         <activity android:name=".quiz.QuizResults"
             android:exported="true"/>
 
-
         <activity
             android:name=".AcknowledgePageActivity"
-            android:exported="true" />
-            <activity
-                android:name=".MapActivity"
-                android:exported="true" >
+            android:exported="true" >
 
-            <intent-filter>
+
+
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

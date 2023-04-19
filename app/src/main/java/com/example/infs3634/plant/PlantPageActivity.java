@@ -34,7 +34,6 @@ public class PlantPageActivity extends AppCompatActivity {
     private EditText searchBar;
     private Button sortButton;
     private boolean ascendingOrder = true;
-    private ImageButton imageButton;
     BottomNavigationView bottomNavigationView;
 
     @Override
@@ -74,13 +73,13 @@ public class PlantPageActivity extends AppCompatActivity {
             }
         });
 
-        //Press image button to open QR code page
-        ImageView imagebutton = findViewById(R.id.plants_right_image);
-        imagebutton.setOnClickListener(new View.OnClickListener() {
+        //Press list button to open favorite plant page
+        ImageView list_button = findViewById(R.id.plants_right_image);
+        list_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Create an Intent to launch the QRScanActivity
-                Intent intent = new Intent(PlantPageActivity.this, TimelineActivity.class);
+                Intent intent = new Intent(PlantPageActivity.this, ReserveActivity.class);
                 // Start the QRScanActivity
                 startActivity(intent);
             }

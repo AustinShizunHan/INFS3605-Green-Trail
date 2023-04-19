@@ -3,29 +3,31 @@ package com.example.infs3634.location;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.RadioButton;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.infs3634.MainActivity;
 import com.example.infs3634.R;
-import com.example.infs3634.plant.PlantDetailActivity;
 import com.example.infs3634.plant.PlantPageActivity;
 import com.example.infs3634.plant.QRScanActivity;
+import com.example.infs3634.plant.ReserveActivity;
 import com.example.infs3634.quiz.QuizStartPage;
 import com.example.infs3634.timeline.TimelineActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public abstract class MapViewActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener{
+public class MapViewActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private final LatLng Plant1 = new LatLng(-33.917285252570245, 151.22632669113395);
     private final LatLng Plant2 = new LatLng(-33.916645315222944, 151.2262411027797);
@@ -52,6 +54,11 @@ public abstract class MapViewActivity extends AppCompatActivity implements OnMap
     private final LatLng Plant23 = new LatLng(-33.91712504171482, 151.23007736997792);
     private final LatLng Plant24 = new LatLng(-33.91733435405896, 151.230168887348);
     private final LatLng Plant25 = new LatLng(-33.9173941368591, 151.22761792802163);
+    private final LatLng Nura_Gilli = new LatLng(-33.9178784,151.2312391);
+    private final LatLng Aboriginal_Flag_Raised = new LatLng(-33.916704, 151.234616);
+    private final LatLng Shaded_Study_Area1 = new LatLng(-33.9175074,151.2311203);
+    private final LatLng Shaded_Study_Area2 = new LatLng(-33.917670, 151.228235);
+    private final LatLng Shaded_Study_Area3 = new LatLng(-33.916171, 151.229247);
 
     private Marker marker1;
     private Marker marker2;
@@ -78,140 +85,27 @@ public abstract class MapViewActivity extends AppCompatActivity implements OnMap
     private Marker marker23;
     private Marker marker24;
     private Marker marker25;
+    private Marker marker_nuragilli;
+    private Marker marker_flag;
+    private Marker marker_shade1;
+    private Marker marker_shade2;
+    private Marker marker_shade3;
 
-    private MapView mMapView;
-    private GoogleMap mGoogleMap;
-    UiSettings mUiSettings;
-    BottomNavigationView bottomNavigationView;
-
-    public void getMapAsync (OnMapReadyCallback callback){
-
-        mMapView.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(GoogleMap googleMap) {
-//                mGoogleMap.setOnInfoWindowClickListener(this);
-                mGoogleMap = googleMap;
-                mUiSettings = mGoogleMap.getUiSettings();
-
-                // Set up the Google Map with desired options
-                mUiSettings.setZoomControlsEnabled(true);
-                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Plant23,15));
-
-                //Add Markers
-                marker1 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant1)
-                        .title("Hills Fig"));
-
-                marker2 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant2)
-                        .title("Gymea Lily"));
-
-                marker3 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant3)
-                        .title("Broad-leaved Paperbark"));
-
-                marker4 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant4)
-                        .title("Crimson Bottlebrush"));
-
-                marker5 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant5)
-                        .title("Heath Banksia"));
-
-                marker6 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant6)
-                        .title("Mountain Ceder Wattle"));
-
-                marker7 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant7)
-                        .title("Native Mint"));
-
-                marker8 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant8)
-                        .title("Tuckeroo"));
-
-                marker9 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant9)
-                        .title("Prickly Leaved tea Tree"));
-
-                marker10 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant10)
-                        .title("Water Vine"));
-
-                marker11 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant11)
-                        .title("Rock Lily"));
-
-                marker12 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant12)
-                        .title("Sandpaper Fig"));
-
-                marker13 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant13)
-                        .title("Burrawang"));
-
-                marker14 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant14)
-                        .title("Plum Pine/Brown Pine"));
-
-                marker15 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant15)
-                        .title("Tussock Grass"));
-
-                marker16 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant16)
-                        .title("Cabbage Tree Palm"));
-
-                marker17 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant17)
-                        .title("Bolwarra"));
-
-                marker18 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant18)
-                        .title("Blue Flax Lily"));
-
-                marker19 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant19)
-                        .title("Old Man Banksia"));
-
-                marker20 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant20)
-                        .title("Matrush"));
-
-                marker21 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant21)
-                        .title("Ribery"));
-
-                marker22 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant22)
-                        .title("Grass Tree"));
-
-                marker23 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant23)
-                        .title("Native Ginger"));
-
-                marker24 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant24)
-                        .title("Flame Tree"));
-
-                marker25 = googleMap.addMarker(new MarkerOptions()
-                        .position(Plant25)
-                        .title("Port Jackson Fig"));
-            }
-        });
-    }
+    MapView mapView;
+    GoogleMap map;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mapview_page);
 
-        mMapView = findViewById(R.id.mapView);
-        mMapView.onCreate(savedInstanceState);
+        mapView = findViewById(R.id.mapView);
+        mapView.onCreate(savedInstanceState);
+        mapView.getMapAsync(this);
 
+        BottomNavigationView bottomNavigationView;
 
-
-
+        //handle bottomNavigationBar (switch pages)
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.location);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -223,7 +117,7 @@ public abstract class MapViewActivity extends AppCompatActivity implements OnMap
                         // handle Home tab selection
                         return true;
                     case R.id.location:
-//                        launchMapViewActivity();
+//                        launchMapActivity();
                         // handle location tab selection
                         return true;
                     case R.id.search:
@@ -236,15 +130,283 @@ public abstract class MapViewActivity extends AppCompatActivity implements OnMap
                         return true;
                     case R.id.scancode:
                         launchQRScanActivity();
-
+                        // handle timeline tab selection
                         return true;
-
                 }
                 return false;
             }
         });
+
+        //Press list button to open favorite plant page
+        ImageView list_button = findViewById(R.id.plants_right_image);
+        list_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent to launch the QRScanActivity
+                Intent intent = new Intent(MapViewActivity.this, ReserveActivity.class);
+                // Start the QRScanActivity
+                startActivity(intent);
+            }
+        });
+
+        //set radio button activity
+        RadioButton rb1 = findViewById(R.id.radioButton1);
+        RadioButton rb2 = findViewById(R.id.radioButton2);
+        RadioButton rb3 = findViewById(R.id.radioButton3);
+
+        rb1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                map.moveCamera(CameraUpdateFactory.newLatLngZoom(Plant23,15));
+                marker1.setVisible(true);
+                marker2.setVisible(true);
+                marker3.setVisible(true);
+                marker4.setVisible(true);
+                marker5.setVisible(true);
+                marker6.setVisible(true);
+                marker7.setVisible(true);
+                marker8.setVisible(true);
+                marker9.setVisible(true);
+                marker10.setVisible(true);
+                marker11.setVisible(true);
+                marker12.setVisible(true);
+                marker13.setVisible(true);
+                marker14.setVisible(true);
+                marker15.setVisible(true);
+                marker16.setVisible(true);
+                marker17.setVisible(true);
+                marker18.setVisible(true);
+                marker19.setVisible(true);
+                marker20.setVisible(true);
+                marker21.setVisible(true);
+                marker22.setVisible(true);
+                marker23.setVisible(true);
+                marker24.setVisible(true);
+                marker25.setVisible(true);
+                marker_nuragilli.setVisible(false);
+                marker_flag.setVisible(false);
+                marker_shade1.setVisible(false);
+                marker_shade2.setVisible(false);
+                marker_shade3.setVisible(false);
+            }
+        });
+
+        rb2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                map.moveCamera(CameraUpdateFactory.newLatLngZoom(Plant10,16));
+                marker1.setVisible(false);
+                marker2.setVisible(false);
+                marker3.setVisible(false);
+                marker4.setVisible(false);
+                marker5.setVisible(false);
+                marker6.setVisible(false);
+                marker7.setVisible(false);
+                marker8.setVisible(false);
+                marker9.setVisible(false);
+                marker10.setVisible(false);
+                marker11.setVisible(false);
+                marker12.setVisible(false);
+                marker13.setVisible(false);
+                marker14.setVisible(false);
+                marker15.setVisible(false);
+                marker16.setVisible(false);
+                marker17.setVisible(false);
+                marker18.setVisible(false);
+                marker19.setVisible(false);
+                marker20.setVisible(false);
+                marker21.setVisible(false);
+                marker22.setVisible(false);
+                marker23.setVisible(false);
+                marker24.setVisible(false);
+                marker25.setVisible(false);
+                marker_nuragilli.setVisible(true);
+                marker_flag.setVisible(true);
+                marker_shade1.setVisible(false);
+                marker_shade2.setVisible(false);
+                marker_shade3.setVisible(false);
+            }
+        });
+
+        rb3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                map.moveCamera(CameraUpdateFactory.newLatLngZoom(Shaded_Study_Area3,16));
+                marker1.setVisible(false);
+                marker2.setVisible(false);
+                marker3.setVisible(false);
+                marker4.setVisible(false);
+                marker5.setVisible(false);
+                marker6.setVisible(false);
+                marker7.setVisible(false);
+                marker8.setVisible(false);
+                marker9.setVisible(false);
+                marker10.setVisible(false);
+                marker11.setVisible(false);
+                marker12.setVisible(false);
+                marker13.setVisible(false);
+                marker14.setVisible(false);
+                marker15.setVisible(false);
+                marker16.setVisible(false);
+                marker17.setVisible(false);
+                marker18.setVisible(false);
+                marker19.setVisible(false);
+                marker20.setVisible(false);
+                marker21.setVisible(false);
+                marker22.setVisible(false);
+                marker23.setVisible(false);
+                marker24.setVisible(false);
+                marker25.setVisible(false);
+                marker_nuragilli.setVisible(false);
+                marker_flag.setVisible(false);
+                marker_shade1.setVisible(true);
+                marker_shade2.setVisible(true);
+                marker_shade3.setVisible(true);
+
+            }
+        });
+
     }
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+        map = googleMap;
+
+        // Set up the Google Map with desired options
+        map.getUiSettings().setMyLocationButtonEnabled(true);
+        map.getUiSettings().setZoomControlsEnabled(true);
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(Plant23,15));
+
+
+        //Add Markers
+        marker1 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant1)
+                .title("Hills Fig"));
+
+        marker2 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant2)
+                .title("Gymea Lily"));
+
+        marker3 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant3)
+                .title("Broad-leaved Paperbark"));
+
+        marker4 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant4)
+                .title("Crimson Bottlebrush"));
+
+        marker5 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant5)
+                .title("Heath Banksia"));
+
+        marker6 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant6)
+                .title("Mountain Ceder Wattle"));
+
+        marker7 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant7)
+                .title("Native Mint"));
+
+        marker8 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant8)
+                .title("Tuckeroo"));
+
+        marker9 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant9)
+                .title("Prickly Leaved tea Tree"));
+
+        marker10 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant10)
+                .title("Water Vine"));
+
+        marker11 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant11)
+                .title("Rock Lily"));
+
+        marker12 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant12)
+                .title("Sandpaper Fig"));
+
+        marker13 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant13)
+                .title("Burrawang"));
+
+        marker14 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant14)
+                .title("Plum Pine/Brown Pine"));
+
+        marker15 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant15)
+                .title("Tussock Grass"));
+
+        marker16 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant16)
+                .title("Cabbage Tree Palm"));
+
+        marker17 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant17)
+                .title("Bolwarra"));
+
+        marker18 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant18)
+                .title("Blue Flax Lily"));
+
+        marker19 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant19)
+                .title("Old Man Banksia"));
+
+        marker20 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant20)
+                .title("Matrush"));
+
+        marker21 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant21)
+                .title("Ribery"));
+
+        marker22 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant22)
+                .title("Grass Tree"));
+
+        marker23 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant23)
+                .title("Native Ginger"));
+
+        marker24 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant24)
+                .title("Flame Tree"));
+
+        marker25 = googleMap.addMarker(new MarkerOptions()
+                .position(Plant25)
+                .title("Port Jackson Fig"));
+
+        marker_nuragilli = googleMap.addMarker(new MarkerOptions()
+                .position(Nura_Gilli)
+                .title("Nura_Gilli")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+
+        marker_flag = googleMap.addMarker(new MarkerOptions()
+                .position(Aboriginal_Flag_Raised)
+                .title("Aboriginal_Flag_Raised")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+
+        marker_shade1 = googleMap.addMarker(new MarkerOptions()
+                .position(Shaded_Study_Area1)
+                .title("Shaded_Study_Area 1")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        marker_shade2 = googleMap.addMarker(new MarkerOptions()
+                .position(Shaded_Study_Area2)
+                .title("Shaded_Study_Area 2")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+        marker_shade3 = googleMap.addMarker(new MarkerOptions()
+                .position(Shaded_Study_Area3)
+                .title("Shaded_Study_Area 3")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+
+
+    }
     public void launchHomeActivity() {
         Intent intent = new Intent(MapViewActivity.this, MainActivity.class);
         startActivity(intent);
@@ -260,7 +422,7 @@ public abstract class MapViewActivity extends AppCompatActivity implements OnMap
         startActivity(intent);
     }
 
-    public void launchMapViewActivity() {
+    public void launchMapActivity() {
         Intent intent = new Intent(MapViewActivity.this, MapViewActivity.class);
         startActivity(intent);
     }
@@ -270,12 +432,29 @@ public abstract class MapViewActivity extends AppCompatActivity implements OnMap
         startActivity(intent);
     }
 
-    //Navigate to PlantDetail Page when click on the info window of the marker
     @Override
-    public void onInfoWindowClick(Marker marker) {
-        // Launch the new activity or fragment here
-        Intent intent = new Intent(this, PlantDetailActivity.class);
-        startActivity(intent);
+    public void onResume() {
+        mapView.onResume();
+        super.onResume();
+    }
+
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mapView.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mapView.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mapView.onLowMemory();
     }
 
 }
