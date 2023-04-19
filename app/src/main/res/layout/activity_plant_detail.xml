@@ -122,16 +122,9 @@
 
     </RelativeLayout>
 
-    <WebView
-        android:id="@+id/webView"
-        android:layout_width="match_parent"
-        android:layout_height="233dp">
-
-    </WebView>
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="166dp">
+        android:layout_height="150dp">
 
         <TextView
             android:id="@+id/plant_details_text_view"
@@ -142,6 +135,13 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
     </ScrollView>
 
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+    </WebView>
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -151,7 +151,7 @@
 
         <ImageView
             android:id="@+id/search"
-            android:layout_width="117dp"
+            android:layout_width="130dp"
             android:layout_height="66dp"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="16dp"
@@ -160,7 +160,7 @@
 
         <ImageView
             android:id="@+id/iv_reserve"
-            android:layout_width="145dp"
+            android:layout_width="100dp"
             android:layout_height="29dp"
             android:layout_gravity="center_vertical"
             android:src="@drawable/li"
@@ -168,7 +168,7 @@
 
         <ImageView
             android:id="@+id/locatep"
-            android:layout_width="101dp"
+            android:layout_width="90dp"
             android:layout_height="66dp"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="16dp"
@@ -178,14 +178,13 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:itemIconTint="@color/black"
         app:itemTextColor="#070707"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@id/linearLayout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
 

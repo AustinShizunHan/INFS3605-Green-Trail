@@ -72,8 +72,6 @@
             android:name=".location.MapViewActivity"
             android:exported="true" />
 
-
-
         <activity
             android:name=".AcknowledgePageActivity"
             android:exported="true" >

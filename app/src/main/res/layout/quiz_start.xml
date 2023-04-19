@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_yellow">
+    android:background="@color/white">
 
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_height="64dp"
         android:layout_centerInParent="true"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="70dp"
         android:ems="10"
         android:gravity="center"
@@ -83,9 +83,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/yellow"
         android:text="Start"
-        app:backgroundTint="#040303"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -93,33 +93,31 @@
 
     <ImageView
         android:id="@+id/quizpic"
-        android:layout_width="400dp"
-        android:layout_height="211dp"
+        android:layout_width="411dp"
+        android:layout_height="160dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="8dp"
         android:backgroundTint="@color/brown"
 
         android:src="@drawable/quiz"
-        app:layout_constraintBottom_toTopOf="@+id/welcomeText"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/line1"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="363dp"
         android:layout_height="77dp"
-        android:layout_marginTop="172dp"
-        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="24dp"
 
-        android:text="grab your friends and go for a bush tucker adventure!"
-        android:textColor="@color/gold"
+        android:fontFamily="sans-serif-medium"
+        android:text="Grab your friends and go for a bush tucker adventure!"
+        android:textColor="@color/black"
         android:textSize="28sp"
-        android:textStyle="bold|italic"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/quizpic" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
