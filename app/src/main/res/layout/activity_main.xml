@@ -9,8 +9,9 @@
 
     <TextView
         android:id="@+id/header_yellow2"
-        android:layout_width="565dp"
-        android:layout_height="70dp"
+        android:layout_width="553dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="12dp"
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/header_yellow"
         app:layout_constraintHorizontal_bias="0.0"
@@ -44,9 +45,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/plants_right_image"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_yellow" />
+
     <TextView
         android:id="@+id/header_yellow"
-        android:layout_width="410dp"
+        android:layout_width="407dp"
         android:layout_height="85dp"
         android:background="@color/yellow"
         app:layout_constraintEnd_toEndOf="parent"

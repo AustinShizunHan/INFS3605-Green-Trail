@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -74,7 +75,7 @@ public class PlantPageActivity extends AppCompatActivity {
         });
 
         //Press image button to open QR code page
-        ImageButton imagebutton = findViewById(R.id.timeline);
+        ImageView imagebutton = findViewById(R.id.plants_right_image);
         imagebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
