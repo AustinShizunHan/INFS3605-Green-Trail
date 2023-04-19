@@ -72,6 +72,9 @@
             android:name=".location.MapViewActivity"
             android:exported="true" />
 
+        <activity android:name=".quiz.QuizResults"
+            android:exported="true"/>
+
 
         <activity
             android:name=".AcknowledgePageActivity"

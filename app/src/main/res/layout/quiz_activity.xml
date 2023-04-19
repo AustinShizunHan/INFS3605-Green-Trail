@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayoutQuiz"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="#FBFBFB">
 
     <TextView
         android:id="@+id/header_yellow"
@@ -82,83 +82,74 @@
 
     <TextView
         android:id="@+id/playerName"
-        android:layout_width="316dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="32dp"
+        android:layout_width="292dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="160dp"
         android:text="Great work!"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/black"
-        android:textSize="34sp"
+        android:textSize="48sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nxtBtn"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <RadioGroup
-        android:id="@+id/answerOptions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="@+id/playerName"
-        app:layout_constraintStart_toStartOf="@+id/tvScore"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </RadioGroup>
 
     <TextView
         android:id="@+id/tvquizQuestion"
-        android:layout_width="335dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:text="Quiz"
         android:textAppearance="?android:attr/textAppearanceLarge"
         app:layout_constraintBottom_toTopOf="@+id/tvScore"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/line1"
-        app:layout_constraintVertical_bias="0.278" />
+        app:layout_constraintVertical_bias="0.273" />
 
     <Button
         android:id="@+id/nxtBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/yellow"
+        android:layout_marginTop="576dp"
+        android:backgroundTint="@color/black"
         android:text="Next"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvScore"
         android:layout_width="58dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="232dp"
         android:layout_marginBottom="80dp"
         android:text="Score: "
         android:textColor="#000000"
         android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvscoreStatus"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/tvscoreStatus"
         android:layout_width="26dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="64dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="76dp"
         android:text="0"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -173,48 +164,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-    <RadioButton
-        android:id="@+id/rb2"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:checked="false"
-        android:text="Option B"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rb1" />
+    <RadioGroup
+        android:id="@+id/answerOptions"
+        android:layout_width="279dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="330dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/playerName"
+        app:layout_constraintStart_toStartOf="@+id/tvScore"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <RadioButton
-        android:id="@+id/rb3"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:checked="false"
-        android:text="Option C"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rb2" />
 
-    <RadioButton
-        android:id="@+id/rb1"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:checked="false"
-        android:text="Option A"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvquizQuestion" />
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Option A" />
 
-    <RadioButton
-        android:id="@+id/rb4"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:checked="false"
-        android:text="Option D"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rb3" />
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Option B" />
 
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Option C" />
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:checked="false"
+            android:text="Option D" />
+
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
