@@ -18,7 +18,14 @@ import com.example.infs3634.timeline.TimelineActivity;
 import com.google.android.gms.maps.MapView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+        /*
+        References
+        Used an image for acknowledgement page: https://unsplash.com/photos/LanGUEBuDPY
 
+        Used images on main activity layout:
+        https://www.indigenous.unsw.edu.au/sites/default/files/styles/teaser_desktop/public/images/3.jpg?h=d318f057&itok=rUpQX4cm
+        https://www.indigenous.unsw.edu.au/sites/default/files/styles/massive/public/images/Nura-Gili-flags-bg2.jpg?itok=8WJIDYQ2
+        */
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
