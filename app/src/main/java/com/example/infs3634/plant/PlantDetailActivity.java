@@ -33,11 +33,13 @@ public class PlantDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ImageView search;
+        ImageView share;
         BottomNavigationView bottomNavigationView;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plant_detail);
         webView = findViewById(R.id.webView);
+
         plants_right_image = findViewById(R.id.plants_right_image);
         plants_right_image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +48,16 @@ public class PlantDetailActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
+
+//        share = findViewById(R.id.plants_right_share);
+//        share.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent1 = new Intent(PlantDetailActivity.this, MapViewActivity.class);
+//                startActivity(intent1);
+//            }
+//        });
+
         webView.getSettings().setJavaScriptEnabled(true);
         final String name = getIntent().getStringExtra("name");
         String description = getIntent().getStringExtra("description");
