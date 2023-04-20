@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.infs3634.MainActivity;
 import com.example.infs3634.R;
+import com.example.infs3634.plant.PlantDetailActivity;
 import com.example.infs3634.plant.PlantPageActivity;
 import com.example.infs3634.plant.QRScanActivity;
 import com.example.infs3634.plant.ReserveActivity;
@@ -405,8 +406,22 @@ public class MapViewActivity extends AppCompatActivity implements OnMapReadyCall
                 .title("Shaded_Study_Area 3")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
 
-
+        map.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+            @Override
+            public void onInfoWindowClick(Marker marker1) {
+                Intent intent = new Intent(MapViewActivity.this, PlantPageActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
+    //Click marker's info window direct to plant detail page
+//    @Override
+//    public void onInfoWindowClick(Marker marker1) {
+//        Intent intent = new Intent(MapViewActivity.this, PlantDetailActivity.class);
+//        startActivity(intent);
+//    }
+
     public void launchHomeActivity() {
         Intent intent = new Intent(MapViewActivity.this, MainActivity.class);
         startActivity(intent);
