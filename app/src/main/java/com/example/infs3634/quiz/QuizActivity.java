@@ -46,7 +46,7 @@ public class QuizActivity extends AppCompatActivity {
             "Finish the sentence traditional uses of the mountain cedal",
             "Which plant can be used to dye fibres?",
             "Which plant have the indigenous used to treat headaches and colds?",
-            "Juicy, sweet and kind of fun, I am a plant that people like a ton. You can make me into jam, chutneys and even desserts. You’ll find me at the north wing of the most important building on campus if you are alert.  Can you guess what I am?"
+            "You can make me into jam, chutneys and even desserts. Find me at the north wing. Can you guess what I am?"
     };
     //array storing quiz answers
     String answers[] = {"9", "Edible pea flower", "Blue Flax Lily", "Native mint", "Plum Pine"
@@ -87,7 +87,7 @@ public class QuizActivity extends AppCompatActivity {
         if (input.trim().equals("")) //.trim to remove white space
             playerName.setText("Hello Player");
         else
-            playerName.setText("You're on a roll " + input + "!");
+            playerName.setText("Great Job!");
 
 
         // next button declarations

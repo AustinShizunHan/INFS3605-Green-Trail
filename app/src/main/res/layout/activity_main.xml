@@ -117,17 +117,18 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="396dp"
-        android:layout_height="111dp"
+        android:layout_width="244dp"
+        android:layout_height="95dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:text="@string/discover_text"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="13sp"
+        app:fontFamily="sans-serif-light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 

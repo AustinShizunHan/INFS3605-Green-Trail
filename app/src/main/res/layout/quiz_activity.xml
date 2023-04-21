@@ -91,26 +91,25 @@
         android:textColor="@color/black"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/nxtBtn"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/tvquizQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="16dp"
         android:text="Quiz"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:autoSizeTextType="none"
         app:layout_constraintBottom_toTopOf="@+id/tvScore"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/line1"
-        app:layout_constraintVertical_bias="0.273" />
+        app:layout_constraintVertical_bias="0.269" />
 
     <Button
         android:id="@+id/nxtBtn"
@@ -166,20 +165,21 @@
 
     <RadioGroup
         android:id="@+id/answerOptions"
-        android:layout_width="279dp"
-        android:layout_height="280dp"
-        android:layout_marginTop="330dp"
+        android:layout_width="224dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="231dp"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/playerName"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/playerName"
         app:layout_constraintStart_toStartOf="@+id/tvScore"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/playerName">
 
 
         <RadioButton
             android:id="@+id/rb1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="195dp"
+            android:layout_height="36dp"
             android:checked="false"
             android:text="Option A" />
 
@@ -199,8 +199,8 @@
 
         <RadioButton
             android:id="@+id/rb4"
-            android:layout_width="290dp"
-            android:layout_height="50dp"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
             android:checked="false"
             android:text="Option D" />
 
